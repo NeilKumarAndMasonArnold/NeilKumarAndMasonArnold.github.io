@@ -155,6 +155,9 @@ table {
 	--fw-extra-bold: 800;
 	--fw-heavy: 900;
 
+	/* ---- LETTER SPACING ---- */
+	--ls-normal: 0.2rem;
+
 	/* ---- TRANSITION DURATIONS --- */
 	--td-short-1: 50ms;
 	--td-short-2: 100ms;
