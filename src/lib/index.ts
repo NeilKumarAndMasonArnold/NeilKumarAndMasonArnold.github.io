@@ -19,7 +19,16 @@ export let pageTree = [
 ];
 
 // ---- Image Library ----
-export let imageLibrary = [
+export interface Image {
+	src: string;
+	alt: string;
+	title: string;
+	creator: string;
+	type?: 'art' | 'photo';
+	description?: string;
+	pin: boolean;
+}
+export const imageLibrary: Image[] = [
 	{
 		src: '/images/EnjoyingDiscoveryPark.jpg',
 		alt: 'Mason and Neil smiling together in front of a scenic beach at the Seattle Sound outside Discovery Park.  Mason, on the left, is wearing glasses and a grey sweater, while Neil, on the right, is wearing glasses and a dark hoodie.  They are standing close together with a beautiful view of the water and greenery in the background under a cloudy sky.',
@@ -186,7 +195,11 @@ export let imageLibrary = [
 ];
 
 // ---- Icon Library ----
-export const iconLibrary = {
+export interface Icon {
+	path: string;
+	viewBox: string;
+}
+export const iconLibrary: { [key: string]: Icon } = {
 	'checked-calendar': {
 		path: 'M128 0c13.3 0 24 10.7 24 24V64H296V24c0-13.3 10.7-24 24-24s24 10.7 24 24V64h40c35.3 0 64 28.7 64 64v16 48V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V192 144 128C0 92.7 28.7 64 64 64h40V24c0-13.3 10.7-24 24-24zM400 192H48V448c0 8.8 7.2 16 16 16H384c8.8 0 16-7.2 16-16V192zM329 297L217 409c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47 95-95c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z',
 		viewBox: '0 0 448 512'
