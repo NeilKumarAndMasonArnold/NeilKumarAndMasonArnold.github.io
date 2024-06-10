@@ -1,0 +1,280 @@
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * GENERIC STYLE RESET (start)                                                                   *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol,
+ul {
+	list-style: none;
+}
+blockquote,
+q {
+	quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
+ * GENERIC STYLE RESET (end)                                                                     *
+ * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * */
+
+/* Root Variables (Sans Theming) */
+:root {
+	/* ---- FONTS ---- */
+	--font-main: 'Overpass', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+		Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	--font-mono: 'Fira Mono', 'Consolas', monospace;
+
+	/* ---- FONT SIZES ---- */
+	--fs-extra-small: 0.8rem;
+	--fs-small: 0.9rem;
+	--fs-normal: 1rem;
+	--fs-semi-large: 1.2rem;
+	--fs-large: 1.5rem;
+	--fs-extra-large: 3rem;
+	--fs-enormous: 3.5rem;
+
+	/* ---- FONT WEIGHTS ---- */
+	--fw-hairline: 100;
+	--fw-extra-light: 200;
+	--fw-light: 300;
+	--fw-normal: 400;
+	--fw-medium: 500;
+	--fw-semi-bold: 600;
+	--fw-bold: 700;
+	--fw-extra-bold: 800;
+	--fw-heavy: 900;
+
+	/* ---- TRANSITION DURATIONS --- */
+	--td-short-1: 50ms;
+	--td-short-2: 100ms;
+	--td-short-3: 150ms;
+	--td-short-4: 200ms;
+	--td-medium-1: 250ms;
+	--td-medium-2: 300ms;
+	--td-medium-3: 350ms;
+	--td-medium-4: 400ms;
+	--td-long-1: 450ms;
+	--td-long-2: 500ms;
+	--td-long-3: 550ms;
+	--td-long-4: 600ms;
+	--td-extra-long-1: 700ms;
+	--td-extra-long-2: 800ms;
+	--td-extra-long-3: 900ms;
+	--td-extra-long-4: 1s;
+
+	/* ---- TRANSITION EASINGS ---- */
+	--te-emphasized: cubic-bezier(0.2, 0, 0, 1);
+	--te-emphasized-acc: cubic-bezier(0.3, 0, 0.8, 0.15);
+	--te-emphasized-dec: cubic-bezier(0.05, 0.7, 0.1, 1);
+	--te-standard: cubic-bezier(0.2, 0, 0, 1);
+	--te-standard-acc: cubic-bezier(0.3, 0, 1, 1);
+	--te-standard-dec: cubic-bezier(0, 0, 0, 1);
+	--te-linear: cubic-bezier(0, 0, 1, 1);
+}
+
+/* Accessibility */
+img:not([alt]),
+img[alt=''] {
+	border: 10px solid red !important;
+}
+
+/* Theming Colors (common, light, dark) */
+body {
+	/* ---- GRADIENT BREAK-POINTS ---- */
+	--c-gradient-1: rgb(21, 136, 102);
+	--c-gradient-2: rgb(83, 157, 137);
+	--c-gradient-3: rgb(102, 143, 225);
+
+	/* ---- BACKGROUNDS ---- */
+	--c-background-hover: rgba(182, 143, 49, 0.2);
+
+	/* ---- TEXTS ---- */
+	--c-text-active: rgb(0, 0, 0);
+
+	/* ---- THEME-TOGGLE COLORS ---- */
+	--c-toggle-sky-day: rgb(173, 207, 245);
+	--c-toggle-sky-night: rgb(0, 0, 0);
+	--c-toggle-moon: rgb(246, 236, 155);
+	--c-toggle-son: rgb(255, 236, 66);
+	--c-toggle-star: rgb(255, 255, 255);
+
+	/* ---- SHADOWS and GLOWS ---- */
+	--c-shadow-drop: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.08);
+	--c-shadow-scrim: rgba(0, 0, 0, 0.4);
+	--c-glow-honor: rgb(255, 255, 153);
+}
+body.light-theme {
+	color-scheme: light;
+
+	/* ---- ACCENTS ---- */
+	--c-accent-modes: rgb(229, 193, 103);
+	--c-accent-mason: rgb(78, 146, 142);
+	--c-accent-neil: rgb(73, 119, 218);
+
+	/* ---- BACKGROUNDS ---- */
+	--c-background-main: rgb(248, 245, 236);
+	--c-background-nav: rgb(236, 225, 198);
+	--c-background-active: rgb(229, 193, 103);
+
+	/* ---- TEXTS ---- */
+	--c-text-main: rgb(19, 16, 7);
+	--c-text-nav: rgb(19, 16, 7);
+	--c-text-hover: rgb(0, 0, 0);
+	--c-text-tonal: rgb(80, 69, 22);
+
+	/* ---- SHADOWS and GLOWS ---- */
+	--c-shadow-gallery: rgba(0, 0, 0, 0.2);
+	--c-glow-honor-aura: rgb(214, 181, 102);
+}
+body.dark-theme {
+	color-scheme: dark;
+
+	/* ---- ACCENTS ---- */
+	--c-accent-modes: rgb(182, 143, 49);
+	--c-accent-mason: rgb(83, 157, 137);
+	--c-accent-neil: rgb(102, 143, 225);
+
+	/* ---- BACKGROUNDS ---- */
+	--c-background-main: rgb(44, 41, 32);
+	--c-background-nav: rgb(69, 66, 59);
+	--c-background-active: rgb(182, 143, 49);
+
+	/* ---- TEXTS ---- */
+	--c-text-main: rgb(206, 197, 176);
+	--c-text-nav: rgb(248, 245, 236);
+	--c-text-hover: rgb(255, 255, 255);
+	--c-text-tonal: rgb(234, 214, 179);
+
+	/* ---- SHADOWS and GLOWS ---- */
+	--c-shadow-gallery: rgba(0, 0, 0, 0.4);
+	--c-glow-honor-aura: rgb(182, 143, 49);
+}
+
+/* Main Styles & Reset */
+* {
+	box-sizing: inherit;
+	font-family: var(--font-main);
+	font: inherit;
+	transition: all var(--td-medium-4) var(--te-emphasized);
+}
+html {
+	box-sizing: border-box;
+	overflow-y: scroll;
+	font-size: var(--fs-normal);
+}
+body {
+	accent-color: var(--c-accent-modes);
+	background: var(--c-background-main);
+	color: var(--c-text-main);
+}
