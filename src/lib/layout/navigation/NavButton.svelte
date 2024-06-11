@@ -29,7 +29,7 @@ Status: Ongoing
 	$: isCurrent =
 		$page.url.pathname === href || ($page.url.pathname.startsWith(href) && href !== '/');
 
-	const strokeColor = derived(page, ($page) => {
+	$: strokeColor = derived(page, ($page) => {
 		if (isCurrent) {
 			return 'var(--c-text-active)';
 		} else if (isHovered) {

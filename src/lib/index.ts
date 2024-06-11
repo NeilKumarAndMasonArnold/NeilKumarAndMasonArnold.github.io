@@ -314,7 +314,7 @@ export let partyMembers = [
 	{
 		name: 'Vanessa Maldonado',
 		image: {
-			src: '/images/vanessa.jpg',
+			src: '/images/party/vanessa.jpg',
 			alt: 'Neil and Vanessa smiling at the Denver Botanical Gardens.  Neil, on the right, is wearing glasses and a black t-shirt, whil Vanessa, on the left, is wearing glasses and has long, curly red hair.  They are standing close together with lush greenery in the background, enjoying a sunny day.'
 		},
 		party: 'Grooms',

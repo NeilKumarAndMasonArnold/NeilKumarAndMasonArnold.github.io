@@ -112,7 +112,7 @@ Status: Okay
 	}
 
 	#theme-toggle:checked ~ label #ray2 {
-		transform: rotate(90deg) translate(-8px, -24px);
+		transform: rotate(90deg) translate(-6px, -24px);
 	}
 
 	#theme-toggle:checked ~ label #ray3 {
@@ -120,7 +120,7 @@ Status: Okay
 	}
 
 	#theme-toggle:checked ~ label #ray4 {
-		transform: rotate(180deg) translate(-8px, -24px);
+		transform: rotate(180deg) translate(-6px, -24px);
 	}
 
 	#theme-toggle:checked ~ label #ray5 {
@@ -128,7 +128,7 @@ Status: Okay
 	}
 
 	#theme-toggle:checked ~ label #ray6 {
-		transform: rotate(270deg) translate(-8px, -24px);
+		transform: rotate(270deg) translate(-6px, -24px);
 	}
 
 	#theme-toggle:checked ~ label #ray7 {
@@ -136,7 +136,7 @@ Status: Okay
 	}
 
 	#theme-toggle:checked ~ label #ray8 {
-		transform: rotate(360deg) translate(-8px, -24px);
+		transform: rotate(360deg) translate(-6px, -24px);
 	}
 
 	#theme-toggle:checked ~ label #moon {
