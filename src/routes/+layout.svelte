@@ -1,5 +1,6 @@
 <script>
 	import Navigation from '$lib/layout/navigation/NavHost.svelte';
+	import './global.css';
 </script>
 
 <Navigation />
