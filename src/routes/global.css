@@ -57,7 +57,7 @@ table {
 	--fw-heavy: 900;
 
 	/* ---- LETTER SPACING ---- */
-	--ls-normal: 0.2rem;
+	/* --ls-normal: 0.2rem; */
 
 	/* ---- TRANSITION DURATIONS --- */
 	--td-short-1: 50ms;
