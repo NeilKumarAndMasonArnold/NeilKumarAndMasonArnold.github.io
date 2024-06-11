@@ -242,8 +242,8 @@ export let partyMembers = [
 		party: 'Bridal',
 		honor: 'Maid of Honor',
 		description: {
-			first_paragraph: '',
-			second_paragraph: ''
+			first_paragraph: '{Not Yet Written}',
+			second_paragraph: '{Not Yet Written}'
 		}
 	},
 	{
@@ -254,8 +254,8 @@ export let partyMembers = [
 		},
 		party: 'Bridal',
 		description: {
-			first_paragraph: '',
-			second_paragraph: ''
+			first_paragraph: '{Not Yet Written}',
+			second_paragraph: '{Not Yet Written}'
 		}
 	},
 	{
@@ -266,8 +266,8 @@ export let partyMembers = [
 		},
 		party: 'Bridal',
 		description: {
-			first_paragraph: '',
-			second_paragraph: ''
+			first_paragraph: '{Not Yet Written}',
+			second_paragraph: '{Not Yet Written}'
 		}
 	},
 	{
@@ -278,8 +278,8 @@ export let partyMembers = [
 		},
 		party: 'Bridal',
 		description: {
-			first_paragraph: '',
-			second_paragraph: ''
+			first_paragraph: '{Not Yet Written}',
+			second_paragraph: '{Not Yet Written}'
 		}
 	},
 	{
@@ -321,7 +321,7 @@ export let partyMembers = [
 		description: {
 			first_paragraph:
 				"From the very first day of college, Vanessa has been a constant source of joy and companionship in my life.  She was one of the first first friends I made and I couldn't have been luckier because since that moment, she has not only become a pillar in my life but also a balancing force in the whirlwind of experiences that college and beyond brought our way.",
-			second_paragraph: ''
+			second_paragraph: '{Not Yet Written}'
 		}
 	}
 ];
