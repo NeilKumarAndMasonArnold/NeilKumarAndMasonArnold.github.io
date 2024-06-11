@@ -14,10 +14,13 @@ const config = {
 			assets: 'build',
 			fallback: '',
 			precompress: false,
-			strict: true
+			strict: true,
 		}),
 		paths: {
 			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
+		},
+		prerender: {
+			handleHttpError: 'ignore'
 		}
 	}
 };
