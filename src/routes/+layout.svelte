@@ -19,10 +19,11 @@
 	}
 
 	div#mainContent {
+		height: max-content;
 		display: flex;
-		height: calc(65vh);
 		justify-content: center;
 		text-align: center;
+		margin-top: 80px;
 	}
 
 	@media (min-width: 767px) {
