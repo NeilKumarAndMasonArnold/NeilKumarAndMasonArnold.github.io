@@ -20,7 +20,7 @@ Status: Complete
 	span::before,
 	span,
 	span::after {
-		transition: all var(--transitiontime1) var(--beziercurve1);
+		transition: all var(--td-medium-4) var(--te-emphasized);
 	}
 
 	button {
@@ -43,7 +43,7 @@ Status: Complete
 		border-radius: 1px;
 		display: flex;
 		flex-wrap: wrap;
-		background: var(--text-nav);
+		background: var(--c-text-nav);
 	}
 
 	span::before,
@@ -53,7 +53,7 @@ Status: Complete
 		width: 24px;
 		border-radius: 1px;
 		position: absolute;
-		background: var(--text-nav);
+		background: var(--c-text-nav);
 	}
 
 	span::before {
