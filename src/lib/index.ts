@@ -1,7 +1,12 @@
 // place files you want to import through the `$lib` alias in this folder.
 
 // ---- Website Page Tree ----
-export let pageTree = [
+export interface Page {
+	name: string,
+	link: string,
+	subpages?: Page[]
+}
+export let pageTree: Page[] = [
 	{ name: 'Home', link: '/' },
 	{
 		name: 'About',
