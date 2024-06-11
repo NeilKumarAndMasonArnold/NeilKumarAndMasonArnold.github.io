@@ -169,17 +169,16 @@ Status: Ongoing
 
 	#main-subnavigation {
 		align-items: center;
-		border-radius: 22.5px;
 		display: flex;
 		gap: 2rem;
 		margin: 1rem;
 	}
 
 	.subnav-buttons {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		gap: 0.5rem;
-		width: 100%;
 	}
 
 	@media (min-width: 767px) {
