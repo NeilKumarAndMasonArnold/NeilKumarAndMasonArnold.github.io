@@ -3,7 +3,7 @@ Gallery Image Component (GalleryImage.svelte)
 Renders an image with expandable meta-data for the image gallery page.
 
 Author: Neil A. Kumar (2024)
-Status: Ongoing
+Status: Okay
 -->
 
 <script>
