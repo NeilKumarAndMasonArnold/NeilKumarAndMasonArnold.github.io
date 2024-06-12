@@ -140,62 +140,6 @@ export const imageLibrary: Image[] = [
 		creator: 'Unsplash',
 		description: 'A placeholder image used for testing website formatting',
 		pin: false
-	},
-	{
-		src: '/images/02.jpg',
-		alt: 'A shapeless blob, blurred',
-		title: 'Template Image 2',
-		creator: 'Unsplash',
-		description: 'A placeholder image used for testing website formatting',
-		pin: false
-	},
-	{
-		src: '/images/03.jpg',
-		alt: 'A shapeless blob, blurred',
-		title: 'Template Image 3',
-		creator: 'Unsplash',
-		description: 'A placeholder image used for testing website formatting',
-		pin: false
-	},
-	{
-		src: '/images/04.jpg',
-		alt: 'A shapeless blob, blurred',
-		title: 'Template Image 4',
-		creator: 'Unsplash',
-		description: 'A placeholder image used for testing website formatting',
-		pin: false
-	},
-	{
-		src: '/images/05.jpg',
-		alt: 'A shapeless blob, blurred',
-		title: 'Template Image 5',
-		creator: 'Unsplash',
-		description: 'A placeholder image used for testing website formatting',
-		pin: false
-	},
-	{
-		src: '/images/06.jpg',
-		alt: 'A shapeless blob, blurred',
-		title: 'Template Image 6',
-		creator: 'Unsplash',
-		description: 'A placeholder image used for testing website formatting',
-		pin: false
-	},
-	{
-		src: '/images/07.jpg',
-		alt: 'A shapeless blob, blurred',
-		title: 'Template Image 7',
-		creator: 'Unsplash',
-		description: 'A placeholder image used for testing website formatting',
-		pin: false
-	},
-	{
-		src: '/images/08.jpg',
-		alt: 'A shapeless blob, blurred',
-		title: 'Template Image 8',
-		creator: 'Unsplash',
-		description: 'A placeholder image used for testing website formatting',
-		pin: false
 	}
 ];
 

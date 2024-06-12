@@ -50,7 +50,9 @@
 	}
 
 	function initializeColumns() {
-		columns = Array(columnsCount).fill(null).map(() => []);
+		columns = Array(columnsCount)
+			.fill(null)
+			.map(() => []);
 	}
 
 	function distributeImages() {
@@ -60,16 +62,16 @@
 	}
 
 	function shuffle(array) {
-		for (let i = array.length -1; i > 0; i--) {
+		for (let i = array.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
 			[array[i], array[j]] = [array[j], array[i]];
 		}
-		return(array);
+		return array;
 	}
 
 	function smartshuffle(array) {
-		let pinnedImages = array.filter(element => element.pin);
-		let remainingImages = array.filter(element => !element.pin);
+		let pinnedImages = array.filter((element) => element.pin);
+		let remainingImages = array.filter((element) => !element.pin);
 
 		pinnedImages = shuffle(pinnedImages);
 		remainingImages = shuffle(remainingImages);
@@ -79,7 +81,13 @@
 </script>
 
 <div class="wrapper">
-	<h1 in:fly={{ y: 10, easing: quintOut, duration: 750 }}>Gallery</h1>
+	<div class="title-text">
+		<h1 in:fly={{ y: 10, easing: quintOut, duration: 750 }}>Gallery</h1>
+		<p in:fly={{ y: 10, easing: quintOut, duration: 900, delay: 1500 }}>
+			Have an image or artwork that you feel should be on here? Email it to us at
+			<a href="mailto:neilmasonarnolddeakins@gmail.com">neilmasonarnolddeakins@gmail.com</a>!
+		</p>
+	</div>
 
 	<div class="masonry-container">
 		{#each columns as column, colIndex}
@@ -96,7 +104,24 @@
 	.wrapper {
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
+		gap: 1rem;
+	}
+
+	.title-text {
+		color: var(--c-text-main);
+	}
+
+	p {
+		margin: 1rem;
+		color: gray; /* Custom css property???? */
+	}
+
+	p a {
+		color: gray; /* Custom css property???? */
+	}
+
+	p a:hover {
+		color: var(--c-text-main);
 	}
 
 	.masonry-container {
