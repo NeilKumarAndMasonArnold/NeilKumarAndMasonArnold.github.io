@@ -7,3 +7,10 @@
 	<h1>Schedule</h1>
 	<p>Coming Soon!</p>
 </div>
+
+<style>
+	h1,
+	p {
+		color: var(--c-text-main);
+	}
+</style>

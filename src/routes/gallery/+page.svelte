@@ -111,6 +111,10 @@
 		color: var(--c-text-main);
 	}
 
+	h1 {
+		color: var(--c-text-main);
+	}
+
 	p {
 		margin: 1rem;
 		color: gray; /* Custom css property???? */

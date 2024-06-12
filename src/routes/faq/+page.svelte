@@ -56,14 +56,20 @@
 		gap: 2rem;
 	}
 
+	h1 {
+		color: var(--c-text-main);
+	}
+
 	h4,
 	p {
 		text-align: left;
 		font-weight: var(--fw-normal);
+		color: var(--c-text-main);
 	}
 
 	span {
 		font-size: var(--fs-semi-large);
 		font-weight: var(--fw-bold);
+		color: var(--c-text-main);
 	}
 </style>

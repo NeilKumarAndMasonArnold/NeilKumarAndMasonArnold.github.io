@@ -8,3 +8,10 @@
 	<p>This is the story of Mason Arnold and Neil Kumar</p>
 	<p>Coming Soon!</p>
 </div>
+
+<style>
+	h1,
+	p {
+		color: var(--c-text-main);
+	}
+</style>
