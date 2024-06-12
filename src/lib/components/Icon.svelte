@@ -28,3 +28,9 @@ Status: Complete
 		<path {fill} d={path} />
 	{/if}
 </svg>
+
+<style>
+	path {
+		transition: fill var(--td-medium-4) var(--te-emphasized);
+	}
+</style>
