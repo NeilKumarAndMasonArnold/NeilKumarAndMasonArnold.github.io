@@ -71,6 +71,7 @@ Status: Ongoing
 	p {
 		font-size: var(--fs-normal);
 		margin-bottom: 2rem;
+		color: var(--c-text-main);
 	}
 
 	div.call-to-action {
