@@ -22,7 +22,7 @@ Status: Ongoing
 
 	<div class="call-to-action">
 		<Button
-			fill="var(--c-text-highlight)"
+			fill="var(--c-text-hover)"
 			href="/rsvp"
 			icon="open-envelope-with-document"
 			type="filled"
