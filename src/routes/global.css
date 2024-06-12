@@ -99,6 +99,9 @@ body {
 	--c-gradient-2: rgb(83, 157, 137);
 	--c-gradient-3: rgb(102, 143, 225);
 
+	/* ---- TEXTS ---- */
+	--c-text-link: rgb(182, 143, 49);
+
 	/* ---- BACKGROUNDS ---- */
 	--c-background-hover: rgba(182, 143, 49, 0.2);
 
