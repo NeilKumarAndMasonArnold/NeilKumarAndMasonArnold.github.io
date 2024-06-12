@@ -65,7 +65,6 @@ Status: Okay
 		box-sizing: border-box;
 		display: flex;
 		justify-content: center;
-		margin-bottom: 2rem;
 	}
 
 	.tabs {
@@ -100,6 +99,7 @@ Status: Okay
 	.tabs label {
 		font-size: var(--fs-large);
 		font-weight: var(--fw-bold);
+		color: var(--c-text-main);
 	}
 
 	.tab {

@@ -18,7 +18,7 @@
 		initializeColumns();
 
 		window.addEventListener('resize', handleResize);
-		isInitialized = true; 
+		isInitialized = true;
 	});
 
 	onDestroy(() => {
@@ -49,7 +49,9 @@
 	}
 
 	function initializeColumns() {
-		columns = Array(columnsCount).fill(null).map(() => []);
+		columns = Array(columnsCount)
+			.fill(null)
+			.map(() => []);
 	}
 
 	function distributeMembers() {
@@ -60,21 +62,21 @@
 	}
 
 	function shuffle(array) {
-		for (let i = array.length-1; i > 0; i--) {
+		for (let i = array.length - 1; i > 0; i--) {
 			const j = Math.floor(Math.random() * (i + 1));
 			[array[i], array[j]] = [array[j], array[i]];
 		}
-		return(array);
+		return array;
 	}
 
 	function smartshuffle(array) {
-		let honorsMembers = array.filter(element => element.honor);
-		let remainingMembers = array.filter(element => !element.honor);
+		let honorsMembers = array.filter((element) => element.honor);
+		let remainingMembers = array.filter((element) => !element.honor);
 
 		honorsMembers = shuffle(honorsMembers);
 		remainingMembers = shuffle(remainingMembers);
 
-		let unfilteredMemberArray = [ ...honorsMembers, ...remainingMembers];
+		let unfilteredMemberArray = [...honorsMembers, ...remainingMembers];
 		let selectedMembers = [];
 
 		if ($selectedParty === 'bride') {
@@ -98,6 +100,9 @@
 	<h1 in:fly={{ y: 10, easing: quintOut, duration: 750 }}>The Wedding Party</h1>
 
 	<PartySwitcher />
+	<p in:fly={{ y: -10, easing: quintOut, duration: 900, delay: 1000 }}>
+		Click on the three-way toggle above to filter the results!
+	</p>
 
 	{#key columns}
 		<div class="masonry-container">
@@ -116,8 +121,18 @@
 	.wrapper {
 		display: flex;
 		flex-direction: column;
-		gap: 2rem;
+		gap: 1rem;
 		width: 100%;
+	}
+
+	h1 {
+		margin-bottom: 1rem;
+		color: var(--c-text-main);
+	}
+
+	p {
+		margin-bottom: 1rem;
+		color: gray; /* Custom css property???? */
 	}
 
 	.masonry-container {

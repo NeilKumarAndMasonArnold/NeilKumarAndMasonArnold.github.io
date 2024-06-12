@@ -136,4 +136,10 @@ Status: Okay
 		object-fit: cover;
 		display: block;
 	}
+
+	h4,
+	p,
+	i {
+		color: var(--c-text-main);
+	}
 </style>

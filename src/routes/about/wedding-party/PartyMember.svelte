@@ -113,12 +113,14 @@ Status: Ongoing
 
 	p {
 		margin-top: 1rem;
+		color: var(--c-text-main);
 	}
 
 	h1 {
 		margin: 0 0 5px;
 		font-size: var(--fs-large);
 		font-weight: var(--fw-bold);
+		color: var(--c-text-main);
 	}
 
 	h2 {

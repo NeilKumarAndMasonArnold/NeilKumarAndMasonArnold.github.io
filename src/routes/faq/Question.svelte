@@ -7,15 +7,17 @@ Status: Complete
 -->
 
 <script>
+	export let questionNum;
+
 	import { iconLibrary } from '$lib';
 	import { quintOut } from 'svelte/easing';
-	import { slide } from 'svelte/transition';
+	import { slide, fly } from 'svelte/transition';
 	import Icon from '$lib/components/Icon.svelte';
 
 	let expanded = false;
 </script>
 
-<div class="question-container" class:expanded>
+<div class="question-container" class:expanded in:fly={{ x: -10, easing: quintOut, duration: 750, delay: questionNum*250 }}>
 	<div class="dropdown-container" class:closed={!expanded}>
 		<div
 			role="button"

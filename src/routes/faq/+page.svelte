@@ -4,10 +4,10 @@
 	import { quintOut } from 'svelte/easing';
 </script>
 
-<div class="wrapper" in:fly={{ y: 10, easing: quintOut, duration: 750 }}>
-	<h1>FAQ – Frequently Asked Questions</h1>
+<div class="wrapper">
+	<h1 in:fly={{ y: 10, easing: quintOut, duration: 750 }}>FAQ – Frequently Asked Questions</h1>
 
-	<Question>
+	<Question questionNum=1>
 		<h4 slot="question"><span>Q: </span>Why might I see a swastika at/on [location]?</h4>
 		<p slot="answer">
 			<span>A: </span>As a Hindu and a Jew with elements of Christian syncretism, we are intimately
@@ -24,7 +24,7 @@
 		</p>
 	</Question>
 
-	<Question>
+	<Question questionNum=2>
 		<h4 slot="question"><span>Q: </span>Why is do I see a swastik covered / hidden?</h4>
 		<p slot="answer">
 			<span>A: </span>We recognize the deep sensitivity surrounding the swastika symbol, especially
@@ -36,12 +36,12 @@
 		</p>
 	</Question>
 
-	<Question>
+	<Question questionNum=3>
 		<h4 slot="question"><span>Q: </span>Will any of the cermonies have a dress code?</h4>
 		<p slot="answer"><span>A: </span>Information on this will be coming soon!</p>
 	</Question>
 
-	<Question>
+	<Question questionNum=4>
 		<h4 slot="question"><span>Q: </span>Will there be drinks?</h4>
 		<p slot="answer"><span>A: </span>Information on this will be coming soon!</p>
 	</Question>
@@ -56,14 +56,20 @@
 		gap: 2rem;
 	}
 
+	h1 {
+		color: var(--c-text-main);
+	}
+
 	h4,
 	p {
 		text-align: left;
 		font-weight: var(--fw-normal);
+		color: var(--c-text-main);
 	}
 
 	span {
 		font-size: var(--fs-semi-large);
 		font-weight: var(--fw-bold);
+		color: var(--c-text-main);
 	}
 </style>
