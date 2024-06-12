@@ -99,6 +99,7 @@ Status: Okay
 	.tabs label {
 		font-size: var(--fs-large);
 		font-weight: var(--fw-bold);
+		color: var(--c-text-main);
 	}
 
 	.tab {

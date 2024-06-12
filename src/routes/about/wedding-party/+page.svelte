@@ -125,12 +125,13 @@
 		width: 100%;
 	}
 
-	h1,
-	p {
+	h1 {
 		margin-bottom: 1rem;
+		color: var(--c-text-main);
 	}
 
 	p {
+		margin-bottom: 1rem;
 		color: gray; /* Custom css property???? */
 	}
 
