@@ -18,8 +18,8 @@ Status: Okay
 	import Icon from './Icon.svelte';
 </script>
 
-<button on:click>
-	{#if href}
+{#if href}
+	<button on:click tabindex="-1">
 		<a {href} {target} {...$$restProps} class={`button-${type}`}>
 			{#if icon}
 				<div class="icon-container">
@@ -32,7 +32,9 @@ Status: Okay
 			{/if}
 			<slot />
 		</a>
-	{:else}
+	</button>
+{:else}
+	<button on:click>
 		<div {...$$restProps} class={`button-${type}`}>
 			{#if icon}
 				<div class="icon-container">
@@ -45,8 +47,8 @@ Status: Okay
 			{/if}
 			<slot />
 		</div>
-	{/if}
-</button>
+	</button>
+{/if}
 
 <style>
 	button {
