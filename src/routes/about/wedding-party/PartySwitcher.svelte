@@ -65,7 +65,6 @@ Status: Okay
 		box-sizing: border-box;
 		display: flex;
 		justify-content: center;
-		margin-bottom: 2rem;
 	}
 
 	.tabs {
