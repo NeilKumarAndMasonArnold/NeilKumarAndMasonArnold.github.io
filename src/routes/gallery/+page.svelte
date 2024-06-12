@@ -125,7 +125,7 @@
 	}
 
 	p a:hover {
-		color: var(--c-text-main);
+		color: var(--c-text-link);
 	}
 
 	.masonry-container {

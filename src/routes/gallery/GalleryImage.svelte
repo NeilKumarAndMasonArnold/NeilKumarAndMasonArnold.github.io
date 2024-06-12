@@ -84,21 +84,21 @@ Status: Okay
 	<img src={thisImage.src} alt={thisImage.alt} class:expanded />
 
 	{#if expanded}
-		<div class="image-meta" transition:slide={{ easing: quintOut, duration: 500 }}>
-			<h4>{thisImage.title}</h4>
+		<div class="image-meta" transition:slide={{ easing: quintOut, duration: 750 }}>
+			<h3>{thisImage.title}</h3>
+			<p class="description">{thisImage.description}</p>
 			<p class="creator">
 				{#if thisImage.type}
 					<Icon
 						path={iconLibrary[thisImage.type].path}
 						viewBox={iconLibrary[thisImage.type].viewBox}
-						fill="var(--c-text-nav)"
+						fill="gray"
 						width="1rem"
 						height="1rem"
 					/>
 				{/if}
-				<i>{thisImage.creator}</i>
+				{thisImage.creator}
 			</p>
-			<p>{thisImage.description}</p>
 		</div>
 	{/if}
 </div>
@@ -112,34 +112,38 @@ Status: Okay
 		box-shadow: 0 9.3905074804px 15px var(--c-shadow-gallery);
 	}
 
-	.image-card .image-meta {
-		padding: 1rem;
-	}
-
-	.image-card .image-meta h4,
-	.image-card .image-meta p {
+	.image-meta {
+		padding: 1.5rem;
 		text-align: center;
 	}
 
-	.image-card .image-meta .creator {
-		margin-bottom: 1rem;
+	h3 {
+		margin-bottom: 0.5rem;
+		color: var(--c-text-main);
 	}
 
-	.image-card .expanded {
+	.description {
+		margin-bottom: 1.5rem;
+		color: var(--c-text-main);
+	}
+
+	.creator {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 0.5rem;
+		color: gray; /* Custom css property??? */
+	}
+
+	.expanded {
 		border-radius: 20px 20px 0 0;
 	}
 
-	.image-card img {
+	img {
 		width: 100%;
 		max-width: 100%;
 		border-radius: 20px;
 		object-fit: cover;
 		display: block;
-	}
-
-	h4,
-	p,
-	i {
-		color: var(--c-text-main);
 	}
 </style>

@@ -132,14 +132,6 @@ export const imageLibrary: Image[] = [
 		type: 'photo',
 		description: 'A friendo and an enemio walk into a botanic garden...the third one sees ducks.',
 		pin: false
-	},
-	{
-		src: '/images/01.jpg',
-		alt: 'A shapeless blob, blurred',
-		title: 'Template Image 1',
-		creator: 'Unsplash',
-		description: 'A placeholder image used for testing website formatting',
-		pin: false
 	}
 ];
 

@@ -20,7 +20,7 @@
 			resonates with the disturbing misappropriation by white supremacists and neo-Nazis in more
 			recent times. In respect for our diverse guest list, we've endeavored to minimize its display
 			during our celebrations. For a detailed history of the symbol, please
-			<a href="/about/history_of_the_swastik/swastika">click here</a>
+			<a href="/about/history-of-the-swastik/swastika">click here</a>.
 		</p>
 	</Question>
 
@@ -32,7 +32,7 @@
 			minimized the usage of the swastik symbol during our ceremonies and decor. However, you might
 			still encounter it in a few traditional Hindu contexts. We appreciate everyone's understanding
 			and compassion as we merge two beautiful cultures. For a detailed history of the symbol,
-			please <a href="/about/history_of_the_swastik/swastika">click here</a>
+			please <a href="/about/history-of-the-swastik/swastika">click here</a>.
 		</p>
 	</Question>
 
@@ -65,6 +65,14 @@
 		text-align: left;
 		font-weight: var(--fw-normal);
 		color: var(--c-text-main);
+	}
+
+	a {
+		color: var(--c-text-main);
+	}
+
+	a:hover {
+		color: var(--c-text-link);
 	}
 
 	span {
