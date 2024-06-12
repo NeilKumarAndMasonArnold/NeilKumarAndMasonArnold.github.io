@@ -14,6 +14,9 @@ Status: Ongoing
 
 	import { fly, slide } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
+	import { iconLibrary } from '$lib';
+	
+	import Icon from '$lib/components/Icon.svelte';
 
 	let showDetails = false;
 
@@ -54,6 +57,18 @@ Status: Ongoing
 					{memberInfo.description.second_paragraph}
 				</p>
 			{/if}
+
+			<div id="arrow" style:transform={showDetails ? 'rotate(0deg)' : 'rotate(-180deg)'}>
+				<Icon
+					path={iconLibrary['dropdown'].path}
+					fill="none"
+					stroke="var(--c-text-nav)"
+					stroke-width="3px"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					viewBox={iconLibrary['dropdown'].viewBox}
+				/>
+			</div>
 		</div>
 	</div>
 </div>
@@ -127,6 +142,10 @@ Status: Ongoing
 		margin: 0;
 		font-weight: var(--fw-normal);
 		color: grey; /* Custom css property???? */
+	}
+
+	#arrow {
+		margin-top: 1rem;
 	}
 
 	@media (min-width: 767px) {
