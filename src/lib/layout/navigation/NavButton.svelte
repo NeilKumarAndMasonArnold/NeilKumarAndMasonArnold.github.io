@@ -215,7 +215,7 @@ Status: Ongoing
 
 		#main-subnavigation {
 			background-color: var(--c-background-nav);
-			border-radius: 10px;
+			border-radius: 15px;
 			box-shadow: 0 0 15px var(--c-shadow-gallery);
 			left: 50%;
 			margin: 0;
