@@ -29,7 +29,7 @@ Status: Ongoing
 		border-radius: 20px;
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
+		justify-content: space-between;
 		color: var(--c-text-main);
 		background: var(--c-background-nav);
 		text-decoration: none;
@@ -46,6 +46,7 @@ Status: Ongoing
 
 	div {
 		padding: 1.5rem;
+        height: 100%;
 		text-align: center;
 	}
 </style>
