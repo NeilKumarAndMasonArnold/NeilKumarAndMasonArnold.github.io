@@ -17,7 +17,7 @@ Status: Complete
 	let expanded = false;
 </script>
 
-<div class="question-container" class:expanded in:fly={{ x: -10, easing: quintOut, duration: 750, delay: questionNum*250 }}>
+<div class="question-container" class:expanded in:fly={{ x: -10, easing: quintOut, duration: 750, delay: questionNum*150 }}>
 	<div class="dropdown-container" class:closed={!expanded}>
 		<div
 			role="button"

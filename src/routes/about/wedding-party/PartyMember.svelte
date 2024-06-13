@@ -14,12 +14,15 @@ Status: Ongoing
 
 	import { fly, slide } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
+	import { iconLibrary } from '$lib';
+
+	import Icon from '$lib/components/Icon.svelte';
 
 	let showDetails = false;
 
 	const getDelay = (index, column) => {
 		return column * 100 + index * columnsCount * 100;
-	}
+	};
 </script>
 
 <div
@@ -54,12 +57,23 @@ Status: Ongoing
 					{memberInfo.description.second_paragraph}
 				</p>
 			{/if}
+
+			<div id="arrow" style:transform={showDetails ? 'rotate(0deg)' : 'rotate(-180deg)'}>
+				<Icon
+					path={iconLibrary['dropdown'].path}
+					fill="none"
+					stroke="var(--c-text-main)"
+					stroke-width="3px"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					viewBox={iconLibrary['dropdown'].viewBox}
+				/>
+			</div>
 		</div>
 	</div>
 </div>
 
 <style>
-
 	.party-member-card {
 		border-radius: 20px;
 		margin-bottom: 2rem;
@@ -114,6 +128,8 @@ Status: Ongoing
 	p {
 		margin-top: 1rem;
 		color: var(--c-text-main);
+		text-indent: 2rem;
+		text-align: left;
 	}
 
 	h1 {
@@ -129,9 +145,7 @@ Status: Ongoing
 		color: grey; /* Custom css property???? */
 	}
 
-	@media (min-width: 767px) {
-		p {
-			text-align: left;
-		}
+	#arrow {
+		margin-top: 1rem;
 	}
 </style>
