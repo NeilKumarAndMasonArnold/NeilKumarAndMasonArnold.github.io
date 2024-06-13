@@ -62,7 +62,7 @@ Status: Ongoing
 				<Icon
 					path={iconLibrary['dropdown'].path}
 					fill="none"
-					stroke="var(--c-text-nav)"
+					stroke="var(--c-text-main)"
 					stroke-width="3px"
 					stroke-linecap="round"
 					stroke-linejoin="round"
@@ -129,6 +129,7 @@ Status: Ongoing
 	p {
 		margin-top: 1rem;
 		color: var(--c-text-main);
+		text-indent: 2rem;
 	}
 
 	h1 {
