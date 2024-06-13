@@ -228,7 +228,7 @@ export let partyMembers = [
 		honor: 'Best Man',
 		description: {
 			first_paragraph:
-				'My best friend Aldrin, a beacon of wisdom and strength, has deeply influenced my life with his strong values and unyielding spirit.  He was the backbone I leaned on to not only finish high school but also to navigate the tumultuous early years of college.  With an open heart and ready ear, he has always been there to offer guidance, share a laugh, or simply listen.',
+				'My best friend, Aldrin, a beacon of wisdom and strength, has deeply influenced my life with his strong values and unyielding spirit.  He was the backbone I leaned on to not only finish high school but also to navigate the tumultuous early years of college.  With an open heart and ready ear, he has always been there to offer guidance, share a laugh, or simply listen.',
 			second_paragraph:
 				'His unwavering support has become the cornerstone of my resilience, giving me the strength and determination I needed to persevere through difficult moments in my educational and emotional journey.  Aldrin has a rare gift of grounding those around him, bringing a sense of stability and clarity in times of chaos, while also somehow keeping things light and fun.  I am filled with gratitude for his friendship, a bond that has truly stood the test of time, and enriched my life in more ways that I can count.'
 		}
@@ -257,7 +257,7 @@ export let partyMembers = [
 		description: {
 			first_paragraph:
 				"From the very first day of college, Vanessa has been a constant source of joy and companionship in my life.  She was one of the first first friends I made and I couldn't have been luckier because since that moment, she has not only become a pillar in my life but also a balancing force in the whirlwind of experiences that college and beyond brought our way.",
-			second_paragraph: '{Not Yet Written}'
+			second_paragraph: "She is the ultimate friendo to my enemio and if I was ever replaced by a shape-shifting alien, she would be the first person to notice! (Aside from Mason and the dogs of course.) We could probably get lost in conversation forever if Mason wasn't there to real us in. (We once spent 3 hours just talking in the car because our conversation kept getting side-tracked from deciding where we wanteded to eat!) She is the perfect partner in crime for all things both crazy and mundane.  Here's to many more adventures and laughs with the best friendo a person could ask for!"
 		}
 	},
 	{
