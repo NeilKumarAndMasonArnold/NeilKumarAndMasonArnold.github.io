@@ -12,22 +12,22 @@
 	</p>
 
 	<div class="card-wrapper">
-		<Card href="/about/music" src="/images/graphical/music.jpg">
+		<Card href="/about/music" src="/images/graphical/music.jpg" cardNum="1">
 			<h3 slot="title">Music</h3>
 			<p slot="description">Description</p>
 		</Card>
 
-		<Card href="/about/schedule" src="/images/graphical/events.jpg">
+		<Card href="/about/schedule" src="/images/graphical/events.jpg" cardNum="2">
 			<h3 slot="title">Schedule</h3>
 			<p slot="description">Description</p>
 		</Card>
 
-		<Card href="/about/venue" src="/images/graphical/venue.jpg">
+		<Card href="/about/venue" src="/images/graphical/venue.jpg" cardNum="3">
 			<h3 slot="title">Venue</h3>
 			<p slot="description">Description</p>
 		</Card>
 
-		<Card href="/about/wedding-party" src="images/graphical/party.jpg">
+		<Card href="/about/wedding-party" src="images/graphical/party.jpg" cardNum="4">
 			<h3 slot="title">Wedding Party</h3>
 			<p slot="description">Description</p>
 		</Card>
