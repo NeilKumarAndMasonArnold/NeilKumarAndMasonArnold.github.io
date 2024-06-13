@@ -15,14 +15,14 @@ Status: Ongoing
 	import { fly, slide } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 	import { iconLibrary } from '$lib';
-	
+
 	import Icon from '$lib/components/Icon.svelte';
 
 	let showDetails = false;
 
 	const getDelay = (index, column) => {
 		return column * 100 + index * columnsCount * 100;
-	}
+	};
 </script>
 
 <div
@@ -74,7 +74,6 @@ Status: Ongoing
 </div>
 
 <style>
-
 	.party-member-card {
 		border-radius: 20px;
 		margin-bottom: 2rem;
@@ -130,6 +129,7 @@ Status: Ongoing
 		margin-top: 1rem;
 		color: var(--c-text-main);
 		text-indent: 2rem;
+		text-align: left;
 	}
 
 	h1 {
@@ -147,11 +147,5 @@ Status: Ongoing
 
 	#arrow {
 		margin-top: 1rem;
-	}
-
-	@media (min-width: 767px) {
-		p {
-			text-align: left;
-		}
 	}
 </style>

@@ -6,25 +6,28 @@
 </script>
 
 <div class="wrapper">
-	<h1 in:fly={{ y: 10, easing: quintOut, duration: 750 }}>About Us</h1>
-	<p in:fly={{ y: 10, easing: quintOut, duration: 750 }}>
-		This is the story of Mason Arnold and Neil Kumar
-	</p>
+	<div>
+		<h1 in:fly={{ y: 10, easing: quintOut, duration: 750 }}>About Us</h1>
+		<p in:fly={{ y: 10, easing: quintOut, duration: 750 }}>
+			This is the story of Mason Arnold and Neil Kumar
+		</p>
+	</div>
 
 	<div class="card-wrapper">
-		<Card href="/about/music" src="/images/graphical/music.jpg" cardNum="1">
-			<h3 slot="title">Music</h3>
-			<p slot="description">The songs and instrumentals will be played during the festivities</p>
-		</Card>
-
-		<Card href="/about/schedule" src="/images/graphical/events.jpg" cardNum="2">
+		
+		<Card href="/about/schedule" src="/images/graphical/events.jpg" cardNum="1">
 			<h3 slot="title">Schedule</h3>
-			<p slot="description">A chronological list of events with their cultural significance</p>
+			<p slot="description">A chronological list of events and their cultural significance</p>
 		</Card>
 
-		<Card href="/about/venue" src="/images/graphical/venue.jpg" cardNum="3">
+		<Card href="/about/venue" src="/images/graphical/venue.jpg" cardNum="2">
 			<h3 slot="title">Venue</h3>
 			<p slot="description">All you need to know about the event locations</p>
+		</Card>
+
+		<Card href="/about/music" src="/images/graphical/music.jpg" cardNum="3">
+			<h3 slot="title">Music</h3>
+			<p slot="description">The songs and instrumentals will be played during the festivities</p>
 		</Card>
 
 		<Card href="/about/wedding-party" src="images/graphical/party.jpg" cardNum="4">
@@ -41,8 +44,14 @@
 		color: var(--c-text-main);
 	}
 
+	.wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 1rem;
+	}
+
 	.card-wrapper {
-		width: 80vw;
+		width: 100%;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;

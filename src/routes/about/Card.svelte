@@ -15,7 +15,7 @@ Status: Ongoing
 	import { quintOut } from 'svelte/easing';
 </script>
 
-<a {href} in:fly={{ y: 10, easing: quintOut, duration: 750, delay: cardNum * 100 }}>
+<a {href} in:fly={{ x: -30, easing: quintOut, duration: 750, delay: cardNum * 100 }}>
 	<img {src} alt="A graphical component" />
 	<div>
 		<slot name="title" />
