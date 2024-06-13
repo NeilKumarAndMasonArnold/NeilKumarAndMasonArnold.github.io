@@ -1,17 +1,50 @@
 <script>
 	import { fly } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
+
+	import Card from './Card.svelte';
 </script>
 
-<div class="wrapper" in:fly={{ y: 10, easing: quintOut, duration: 750 }}>
-	<h1>About Us</h1>
-	<p>This is the story of Mason Arnold and Neil Kumar</p>
-	<p>Coming Soon!</p>
+<div class="wrapper">
+	<h1 in:fly={{ y: 10, easing: quintOut, duration: 750 }}>About Us</h1>
+	<p in:fly={{ y: 10, easing: quintOut, duration: 750 }}>
+		This is the story of Mason Arnold and Neil Kumar
+	</p>
+
+	<div class="card-wrapper">
+		<Card href="/about/music" src="/images/graphical/music.jpg">
+			<h3 slot="title">Music</h3>
+			<p slot="description">Description</p>
+		</Card>
+
+		<Card href="/about/schedule" src="/images/graphical/events.jpg">
+			<h3 slot="title">Schedule</h3>
+			<p slot="description">Description</p>
+		</Card>
+
+		<Card href="/about/venue" src="/images/graphical/venue.jpg">
+			<h3 slot="title">Venue</h3>
+			<p slot="description">Description</p>
+		</Card>
+
+		<Card href="/about/wedding-party" src="images/graphical/party.jpg">
+			<h3 slot="title">Wedding Party</h3>
+			<p slot="description">Description</p>
+		</Card>
+	</div>
 </div>
 
 <style>
 	h1,
 	p {
 		color: var(--c-text-main);
+	}
+
+	.card-wrapper {
+		width: 80vw;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 1rem;
 	}
 </style>

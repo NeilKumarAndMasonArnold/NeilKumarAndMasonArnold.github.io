@@ -1,0 +1,47 @@
+<!--
+Card Link Component (Card.svelte)
+Renders a card with an image and description that can also act as a link
+
+Author: Neil A. Kumar
+Status: Ongoing
+-->
+
+<script>
+	export let href = '';
+	export let src = '';
+</script>
+
+<a {href}>
+	<img {src} alt="A graphical component" />
+	<div>
+		<slot name="title" />
+		<slot name="description" />
+	</div>
+</a>
+
+<style>
+	a {
+		width: 20rem;
+		border-radius: 20px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		color: var(--c-text-main);
+		background: var(--c-background-nav);
+		text-decoration: none;
+		box-shadow: 0 9.3905074804px 15px var(--c-shadow-gallery);
+	}
+
+	img {
+		width: 100%;
+		max-width: 100%;
+		border-radius: 20px 20px 0 0;
+		object-fit: cover;
+		display: block;
+	}
+
+	div {
+		padding: 1.5rem;
+		text-align: center;
+	}
+</style>
