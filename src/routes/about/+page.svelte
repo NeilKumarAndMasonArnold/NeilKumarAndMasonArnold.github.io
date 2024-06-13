@@ -35,7 +35,7 @@
 </div>
 
 <style>
-	h1,
+	h3,
 	p {
 		color: var(--c-text-main);
 	}
