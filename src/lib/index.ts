@@ -2,9 +2,9 @@
 
 // ---- Website Page Tree ----
 export interface Page {
-	name: string,
-	link: string,
-	subpages?: Page[]
+	name: string;
+	link: string;
+	subpages?: Page[];
 }
 export let pageTree: Page[] = [
 	{ name: 'Home', link: '/' },
@@ -258,6 +258,18 @@ export let partyMembers = [
 			first_paragraph:
 				"From the very first day of college, Vanessa has been a constant source of joy and companionship in my life.  She was one of the first first friends I made and I couldn't have been luckier because since that moment, she has not only become a pillar in my life but also a balancing force in the whirlwind of experiences that college and beyond brought our way.",
 			second_paragraph: '{Not Yet Written}'
+		}
+	},
+	{
+		name: 'Maydha Kumar',
+		image: {
+			src: '/images/01.jpg',
+			alt: 'A shapless blob, blurred. (This is a placeholder image).'
+		},
+		party: 'Grooms',
+		description: {
+			first_paragraph: "She's my sister.",
+			second_paragraph: 'I love her.'
 		}
 	}
 ];
