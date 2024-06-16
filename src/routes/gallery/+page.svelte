@@ -80,6 +80,10 @@
 	}
 </script>
 
+<svelte:head>
+	<title>Gallery</title>
+</svelte:head>
+
 <div class="wrapper">
 	<div class="title-text">
 		<h1 in:fly={{ y: 10, easing: quintOut, duration: 750 }}>Gallery</h1>
