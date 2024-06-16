@@ -26,9 +26,8 @@ Status: Ongoing
 			href="/rsvp"
 			icon="open-envelope-with-document"
 			type="filled"
-		>
-			RSVP
-		</Button>
+			name="RSVP"
+		/>
 
 		<div class="secondary-button">
 			<Button
@@ -36,9 +35,8 @@ Status: Ongoing
 				href="/about/schedule"
 				icon="checked-calendar"
 				type="tonal"
-			>
-				Schedule
-			</Button>
+				name="Schedule"
+			/>
 		</div>
 	</div>
 </div>

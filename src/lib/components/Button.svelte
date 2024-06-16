@@ -9,6 +9,7 @@ Status: Okay
 
 <script>
 	export let type = '';
+	export let name = 'Button';
 	export let href = '';
 	export let target = '';
 	export let icon = '';
@@ -19,22 +20,20 @@ Status: Okay
 </script>
 
 {#if href}
-	<button on:click tabindex="-1">
-		<a {href} {target} {...$$restProps} class={`button-${type}`}>
-			{#if icon}
-				<div class="icon-container">
-					<Icon
-						{fill}
-						path={iconLibrary[`${icon}`].path}
-						viewBox={iconLibrary[`${icon}`].viewBox}
-					/>
-				</div>
-			{/if}
-			<slot />
-		</a>
-	</button>
+	<a {href} {target} {...$$restProps} class={`button-${type}`}>
+		{#if icon}
+			<div class="icon-container">
+				<Icon
+					{fill}
+					path={iconLibrary[`${icon}`].path}
+					viewBox={iconLibrary[`${icon}`].viewBox}
+				/>
+			</div>
+		{/if}
+		{name}
+	</a>
 {:else}
-	<button on:click>
+	<button on:click title={name}>
 		<div {...$$restProps} class={`button-${type}`}>
 			{#if icon}
 				<div class="icon-container">
@@ -45,7 +44,7 @@ Status: Okay
 					/>
 				</div>
 			{/if}
-			<slot />
+			{name}
 		</div>
 	</button>
 {/if}
