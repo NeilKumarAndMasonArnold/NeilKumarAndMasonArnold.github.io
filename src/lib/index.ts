@@ -263,8 +263,8 @@ export let partyMembers = [
 	{
 		name: 'Maydha Kumar',
 		image: {
-			src: '/images/01.jpg',
-			alt: 'A shapless blob, blurred. (This is a placeholder image).'
+			src: '/images/party/maydha.jpg',
+			alt: 'Maydha is outdoors, gently holding and smelling a bright red flower.  She has long dark hair and is wearing large white glasses and a light-colored jacket.  The background is lush with greenery and trees under a clear blue sky, suggesting a beatiful day in a garden or park.'
 		},
 		party: 'Grooms',
 		description: {
