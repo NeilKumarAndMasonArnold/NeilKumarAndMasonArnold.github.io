@@ -35,7 +35,7 @@ export interface Image {
 }
 export const imageLibrary: Image[] = [
 	{
-		src: '/images/EnjoyingDiscoveryPark.jpg',
+		src: '/images/EnjoyingDiscoveryPark.avif',
 		alt: 'Mason and Neil smiling together in front of a scenic beach at the Seattle Sound outside Discovery Park.  Mason, on the left, is wearing glasses and a grey sweater, while Neil, on the right, is wearing glasses and a dark hoodie.  They are standing close together with a beautiful view of the water and greenery in the background under a cloudy sky.',
 		title: 'Enjoying Discovery Park',
 		creator: 'Neil Kumar',
@@ -44,7 +44,7 @@ export const imageLibrary: Image[] = [
 		pin: true
 	},
 	{
-		src: '/images/InSickness.jpg',
+		src: '/images/InSickness.avif',
 		alt: 'Mason and Neil lying close together in a van, wrapped in sleeping bags and blankets.  Mason is holding Neil, both looking unwell and resting.  Mason is wearing glasses and has her arm around Neil, who has his eyes closed.  The setting appears cozy with a soft blanket and pillows surrounding them, capturing a tender moment of care during their road trip while they were both sick.',
 		title: 'In Sickness and Health',
 		creator: 'Lucy Deakins',
@@ -53,7 +53,7 @@ export const imageLibrary: Image[] = [
 		pin: true
 	},
 	{
-		src: '/images/TheMonster.jpg',
+		src: '/images/TheMonster.avif',
 		alt: "Neil and Mason lying on a couch, with Neil playfully pretending to be a monster attacking Mason's phone.  Neil is making a funny, exaggerated face with his mouth open and eyes wide, while Mason is smiling and partially visible in the foreground.",
 		title: 'The Neil Monster Attacks!!!',
 		creator: 'Mason Arnold',
@@ -62,7 +62,7 @@ export const imageLibrary: Image[] = [
 		pin: true
 	},
 	{
-		src: '/images/NeilAndMasonByRileyArnold.jpg',
+		src: '/images/NeilAndMasonByRileyArnold.avif',
 		alt: 'Digital artwork by Riley Arnold depicting two figures, Mason Arnold and Neil Kumar, in a close and affectionate embrace.  Mason is illustrated wearing a green outfit and glasses, leaning into Neil, who sports a blue shirt and a bun hairstyle.  Both figures are set against a warm mustard-yellow background, emphasizing their closeness in the shared moment.',
 		title: 'Neil and Mason',
 		creator: 'Riley Arnold',
@@ -71,7 +71,7 @@ export const imageLibrary: Image[] = [
 		pin: true
 	},
 	{
-		src: '/images/JellyFish.jpg',
+		src: '/images/JellyFish.avif',
 		alt: "Neil and Mason at the Seattle Aquarium, standing together inside a clear, curved tunnel filled with jellyfish.  They are smiling and standing close, enjoying the exhibit. The background shows other visitors and various displays, with the aquarium's ambient lighting highlighting the marine life.",
 		title: 'Jelly Fishies!!!',
 		creator: 'Riley Arnold',

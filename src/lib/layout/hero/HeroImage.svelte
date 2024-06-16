@@ -33,12 +33,12 @@ Status: Ongoing
 <div class="hero-image" in:fly={{ x: 20, easing: quintOut, duration: 750 }}>
 	<img
 		bind:this={darkImage}
-		src="/images/NeilAndMasonByRileyArnold_DarkMode.jpg"
+		src="/images/NeilAndMasonByRileyArnold_DarkMode.avif"
 		alt="Digital artwork in dark mode"
 	/>
 	<img
 		bind:this={lightImage}
-		src="/images/NeilAndMasonByRileyArnold.jpg"
+		src="/images/NeilAndMasonByRileyArnold.avif"
 		alt="Digital artwork in light mode"
 	/>
 </div>
