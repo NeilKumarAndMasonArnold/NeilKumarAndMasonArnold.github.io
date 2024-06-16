@@ -11,7 +11,7 @@ Status: Complete
 	export let menuOpen = false;
 </script>
 
-<button on:click={() => (menuOpen = !menuOpen)} class:open={menuOpen}>
+<button on:click={() => (menuOpen = !menuOpen)} class:open={menuOpen} title="Open Navigation Panel">
 	<span />
 </button>
 

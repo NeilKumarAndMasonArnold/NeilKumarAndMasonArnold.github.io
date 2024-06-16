@@ -5,6 +5,10 @@
 	import Card from './Card.svelte';
 </script>
 
+<svelte:head>
+	<title>About</title>
+</svelte:head>
+
 <div class="wrapper">
 	<div>
 		<h1 in:fly={{ y: 10, easing: quintOut, duration: 750 }}>About Us</h1>

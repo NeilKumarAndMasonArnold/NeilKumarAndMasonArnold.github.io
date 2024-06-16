@@ -4,6 +4,10 @@
 	import { quintOut } from 'svelte/easing';
 </script>
 
+<svelte:head>
+	<title>FAQ</title>
+</svelte:head>
+
 <div class="wrapper">
 	<h1 in:fly={{ y: 10, easing: quintOut, duration: 750 }}>FAQ – Frequently Asked Questions</h1>
 
