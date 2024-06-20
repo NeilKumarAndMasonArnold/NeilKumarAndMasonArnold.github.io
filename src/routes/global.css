@@ -182,3 +182,9 @@ body {
 	background: var(--c-background-main);
 	color: var(--c-text-main);
 }
+a {
+	color: var(--c-text-main);
+}
+a:hover {
+	color: var(--c-text-link);
+}

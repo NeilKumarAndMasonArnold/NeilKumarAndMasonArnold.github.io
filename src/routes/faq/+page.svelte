@@ -22,7 +22,9 @@
 		},
 		{
 			question: 'Will there be drinks?',
-			answer: 'Information on this will be coming soon!'
+			answer: `
+				As neither of us really drink, we will not be providing alcohol during the wedding.  However, we know that for a couple banches of the family, alcoholic beverages such as wine can be an important and fun cultural aspect of family get-togethers, we encourage anyone to bring their own wine or other alcoholic beverage should they like.  The mother of the bride herself will likely be bringing her home-made rose petal wine!
+			`
 		}
 	];
 </script>
@@ -68,14 +70,6 @@
 		text-align: left;
 		font-weight: var(--fw-normal);
 		color: var(--c-text-main);
-	}
-
-	a {
-		color: var(--c-text-main);
-	}
-
-	a:hover {
-		color: var(--c-text-link);
 	}
 
 	span {
