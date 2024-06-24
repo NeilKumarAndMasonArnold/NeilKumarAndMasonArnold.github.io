@@ -3,7 +3,7 @@
 
 	import TimeCard from './TimeCard.svelte';
 
-	const releaseDate = new Date('2024-08-17T00:00:00');
+	const releaseDate = new Date('2025-08-17T00:00:00');
 
 	let time = {
 		days: 9,
