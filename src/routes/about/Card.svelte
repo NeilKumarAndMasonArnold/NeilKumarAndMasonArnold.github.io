@@ -9,13 +9,13 @@ Status: Ongoing
 <script>
 	export let href = '';
 	export let src = '';
-	export let cardNum;
+	export let index;
 
 	import { fly } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
 </script>
 
-<a {href} in:fly={{ x: -30, easing: quintOut, duration: 750, delay: cardNum * 100 }}>
+<a {href} in:fly|global={{ x: -30, easing: quintOut, duration: 750, delay: index * 100 }}>
 	<img {src} alt="A graphical component" />
 	<div>
 		<slot name="title" />

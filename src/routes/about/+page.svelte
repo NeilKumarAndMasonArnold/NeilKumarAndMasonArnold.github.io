@@ -3,6 +3,33 @@
 	import { quintOut } from 'svelte/easing';
 
 	import Card from './Card.svelte';
+
+	const aboutPageArray = [
+		{
+			title: 'Schedule',
+			description: 'A chronological list of events and their cultural significance',
+			href: "/about/schedule",
+			src: "/images/graphical/events.avif"
+		},
+		{
+			title: 'Venu',
+			description: 'All you need to know about the event locations',
+			href: "/about/venue",
+			src: "/images/graphical/venue.avif"
+		},
+		{
+			title: 'Music',
+			description: 'The songs and instrumentals that will be played during the festivities',
+			href: "/about/music",
+			src: "/images/graphical/music.avif"
+		},
+		{
+			title: 'Wedding Party',
+			description: 'The derps that got us here',
+			href: "/about/wedding-party",
+			src: "/images/graphical/party.avif"
+		}
+	];
 </script>
 
 <svelte:head>
@@ -18,26 +45,12 @@
 	</div>
 
 	<div class="card-wrapper">
-		
-		<Card href="/about/schedule" src="/images/graphical/events.jpg" cardNum="1">
-			<h3 slot="title">Schedule</h3>
-			<p slot="description">A chronological list of events and their cultural significance</p>
-		</Card>
-
-		<Card href="/about/venue" src="/images/graphical/venue.jpg" cardNum="2">
-			<h3 slot="title">Venue</h3>
-			<p slot="description">All you need to know about the event locations</p>
-		</Card>
-
-		<Card href="/about/music" src="/images/graphical/music.jpg" cardNum="3">
-			<h3 slot="title">Music</h3>
-			<p slot="description">The songs and instrumentals will be played during the festivities</p>
-		</Card>
-
-		<Card href="/about/wedding-party" src="images/graphical/party.jpg" cardNum="4">
-			<h3 slot="title">Wedding Party</h3>
-			<p slot="description">The derps that got us here</p>
-		</Card>
+		{#each aboutPageArray as {title, description, href, src}, index}
+			<Card {href} {src} {index}>
+				<h3 slot="title">{title}</h3>
+				<p slot="description">{description}</p>
+			</Card>
+		{/each}
 	</div>
 </div>
 
