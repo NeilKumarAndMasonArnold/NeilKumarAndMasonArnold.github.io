@@ -80,7 +80,7 @@ export const imageLibrary: Image[] = [
 		pin: false
 	},
 	{
-		src: '/images/party/adriana.jpg',
+		src: '/images/party/adriana.avif',
 		alt: 'Adriana is crouching and smiling in a lush garden filled with blooming flowers.  She is wearing a drak green dress with a grey denim jacket, white sneakers, and has a yellow bag slung over her shoulder.  The background is rich with greenery and colorful flowers, with trees providing a natural backdrop.',
 		title: 'Adriana',
 		creator: '{undefined}',
@@ -89,7 +89,7 @@ export const imageLibrary: Image[] = [
 		pin: false
 	},
 	{
-		src: '/images/party/aldrin.jpg',
+		src: '/images/party/aldrin.avif',
 		alt: "Neil and Aldrin smiling at Neil's senior prom.  Neil on the left, is wearing a black suit with a white shirt, a red tie wrapped around his forehead, and a red pocket square.  Aldrin, on the right, is wearing a blue suit with a light blue shirt and a grey tie.  They are standing together with Neil's arm around Aldrin's shoulder, in front of a rustic wooden and stone backdrop.",
 		title: 'Krishna and Aldrin',
 		creator: 'Cameron Ryan',
@@ -98,7 +98,7 @@ export const imageLibrary: Image[] = [
 		pin: false
 	},
 	{
-		src: '/images/party/emily.jpg',
+		src: '/images/party/emily.avif',
 		alt: 'Mason and Emily smiling together indoors.  Both are wearing glasses and have their heads close together.  Mason, on the left, has dark hair and is wearing a patterned top, while Emily, on the right, has her hair up in a bun and is wearing a tank top.  They appear to be enjoying a happy moment together.',
 		title: 'Emily',
 		creator: 'Mason Arnold',
@@ -107,7 +107,7 @@ export const imageLibrary: Image[] = [
 		pin: false
 	},
 	{
-		src: '/images/party/riley.jpg',
+		src: '/images/party/riley.avif',
 		alt: "Mason and Riley standing and laughing together in front of a corrugated metal wall.  Mason, on th eleft, is wearing a blue t-shirt, grey pants, and grey sneakers, with her arm around Riley's shoulder.  Riley, on the right, is wearing a white topand black leggings with white star patterns, and black sneakers.  Both are smiling and appear to be enjoying a light-hearted moment.",
 		title: 'Sisters',
 		creator: '{undefined}',
@@ -116,7 +116,7 @@ export const imageLibrary: Image[] = [
 		pin: false
 	},
 	{
-		src: '/images/party/tyler.jpg',
+		src: '/images/party/tyler.avif',
 		alt: 'A silly photograph of Tyler taken directly from his Instagram page',
 		title: 'innit 4 the thrill (2)',
 		creator: 'Instagram: @vpysher',
@@ -125,7 +125,7 @@ export const imageLibrary: Image[] = [
 		pin: false
 	},
 	{
-		src: '/images/party/vanessa.jpg',
+		src: '/images/party/vanessa.avif',
 		alt: 'Neil and Vanessa smiling at the Denver Botanical Gardens.  Neil, on the right, is wearing glasses and a black t-shirt, whil Vanessa, on the left, is wearing glasses and has long, curly red hair.  They are standing close together with lush greenery in the background, enjoying a sunny day.',
 		title: 'The Best of Friendos',
 		creator: 'Neil Kumar',
@@ -172,7 +172,7 @@ export let partyMembers = [
 	{
 		name: 'Riley Arnold',
 		image: {
-			src: '/images/party/riley.jpg',
+			src: '/images/party/riley.avif',
 			alt: "Mason and Riley standing and laughing together in front of a corrugated metal wall.  Mason, on th eleft, is wearing a blue t-shirt, grey pants, and grey sneakers, with her arm around Riley's shoulder.  Riley, on the right, is wearing a white topand black leggings with white star patterns, and black sneakers.  Both are smiling and appear to be enjoying a light-hearted moment."
 		},
 		party: 'Bridal',
@@ -185,7 +185,7 @@ export let partyMembers = [
 	{
 		name: 'Emily Pierpoint',
 		image: {
-			src: '/images/party/emily.jpg',
+			src: '/images/party/emily.avif',
 			alt: 'Mason and Emily smiling together indoors.  Both are wearing glasses and have their heads close together.  Mason, on the left, has dark hair and is wearing a patterned top, while Emily, on the right, has her hair up in a bun and is wearing a tank top.  They appear to be enjoying a happy moment together.'
 		},
 		party: 'Bridal',
@@ -197,7 +197,7 @@ export let partyMembers = [
 	{
 		name: 'Tyler Fields',
 		image: {
-			src: '/images/party/tyler.jpg',
+			src: '/images/party/tyler.avif',
 			alt: 'A silly photograph of Tyler taken directly from his Instagram page'
 		},
 		party: 'Bridal',
@@ -221,7 +221,7 @@ export let partyMembers = [
 	{
 		name: 'Aldrin Feliciano',
 		image: {
-			src: '/images/party/aldrin.jpg',
+			src: '/images/party/aldrin.avif',
 			alt: "Neil and Aldrin smiling at Neil's senior prom.  Neil on the left, is wearing a black suit with a white shirt, a red tie wrapped around his forehead, and a red pocket square.  Aldrin, on the right, is wearing a blue suit with a light blue shirt and a grey tie.  They are standing together with Neil's arm around Aldrin's shoulder, in front of a rustic wooden and stone backdrop."
 		},
 		party: 'Grooms',
@@ -236,7 +236,7 @@ export let partyMembers = [
 	{
 		name: 'Adriana Feliciano',
 		image: {
-			src: '/images/party/adriana.jpg',
+			src: '/images/party/adriana.avif',
 			alt: 'Adriana is crouching and smiling in a lush garden filled with blooming flowers.  She is wearing a drak green dress with a grey denim jacket, white sneakers, and has a yellow bag slung over her shoulder.  The background is rich with greenery and colorful flowers, with trees providing a natural backdrop.'
 		},
 		party: 'Grooms',
@@ -250,7 +250,7 @@ export let partyMembers = [
 	{
 		name: 'Vanessa Maldonado',
 		image: {
-			src: '/images/party/vanessa.jpg',
+			src: '/images/party/vanessa.avif',
 			alt: 'Neil and Vanessa smiling at the Denver Botanical Gardens.  Neil, on the right, is wearing glasses and a black t-shirt, whil Vanessa, on the left, is wearing glasses and has long, curly red hair.  They are standing close together with lush greenery in the background, enjoying a sunny day.'
 		},
 		party: 'Grooms',
@@ -263,7 +263,7 @@ export let partyMembers = [
 	{
 		name: 'Maydha Kumar',
 		image: {
-			src: '/images/party/maydha.jpg',
+			src: '/images/party/maydha.avif',
 			alt: 'Maydha is outdoors, gently holding and smelling a bright red flower.  She has long dark hair and is wearing large white glasses and a light-colored jacket.  The background is lush with greenery and trees under a clear blue sky, suggesting a beatiful day in a garden or park.'
 		},
 		party: 'Grooms',
