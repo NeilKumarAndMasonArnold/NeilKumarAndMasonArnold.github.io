@@ -46,7 +46,7 @@
 
 	<div class="card-wrapper">
 		{#each aboutPageArray as {title, description, href, src}, index}
-			<Card {href} {src} cardNum={index + 1}>
+			<Card {href} {src} {index}>
 				<h3 slot="title">{title}</h3>
 				<p slot="description">{description}</p>
 			</Card>

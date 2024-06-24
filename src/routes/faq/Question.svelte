@@ -7,7 +7,7 @@ Status: Complete
 -->
 
 <script>
-	export let questionNum;
+	export let index;
 
 	import { iconLibrary } from '$lib';
 	import { quintOut } from 'svelte/easing';
@@ -17,7 +17,7 @@ Status: Complete
 	let expanded = false;
 </script>
 
-<div class="question-container" class:expanded in:fly={{ x: -10, easing: quintOut, duration: 750, delay: questionNum*150 }}>
+<div class="question-container" class:expanded in:fly|global={{ x: -10, easing: quintOut, duration: 750, delay: index * 150 }}>
 	<div class="dropdown-container" class:closed={!expanded}>
 		<div
 			role="button"

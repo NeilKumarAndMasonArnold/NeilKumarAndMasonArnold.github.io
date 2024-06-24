@@ -38,7 +38,7 @@
 
 	<div class="question-container">
 		{#each questionsArray as {question, answer}, index}
-			<Question questionNum={index + 1}>
+			<Question {index}>
 				<h4 slot=question><span>Q: </span>{question}</h4>
 				<p slot=answer><span>A: </span>{@html answer}</p>
 			</Question>
