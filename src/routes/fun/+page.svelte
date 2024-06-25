@@ -39,23 +39,26 @@
 </script>
 
 <div>
-	<TimeCard callback={updateCountdown} name="Days" number={time.days} />
-	<TimeCard callback={updateCountdown} name="Hours" number={time.hours} />
-	<TimeCard callback={updateCountdown} name="Minutes" number={time.minutes} />
 	<TimeCard callback={updateCountdown} name="Seconds" number={time.seconds} />
+	<TimeCard callback={updateCountdown} name="Minutes" number={time.minutes} />
+	<TimeCard callback={updateCountdown} name="Hours" number={time.hours} />
+	<TimeCard callback={updateCountdown} name="Days" number={time.days} />
 </div>
 
 <style>
 	div {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
-		gap: 0.5rem;
+		gap: 2rem;
 	}
 
 	@media (min-width: 767px) {
 		div {
-			gap: 5rem 2rem;
-			flex-wrap: wrap;
+			flex-direction: row-reverse;
+			flex-wrap: wrap-reverse;
+			gap: 2rem 2rem;
+			height: max-content;
 		}
 	}
 </style>
