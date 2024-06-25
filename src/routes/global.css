@@ -136,9 +136,12 @@ body.light-theme {
 	--c-text-hover: rgb(0, 0, 0);
 	--c-text-active: rgb(0, 0, 0);
 	--c-text-tonal: rgb(80, 69, 22);
-
+	
 	/* ---- SHADOWS and GLOWS ---- */
 	--c-shadow-gallery: rgba(0, 0, 0, 0.2);
+	--c-shadow-flipper-high: rgba(240, 230, 210, 0.85);
+	--c-shadow-flipper-low: rgba(194, 184, 158, 0.85);
+	--c-shadow-flipper-crease: grey;
 	--c-glow-honor-aura: rgb(214, 181, 102);
 }
 body.dark-theme {
@@ -163,6 +166,9 @@ body.dark-theme {
 
 	/* ---- SHADOWS and GLOWS ---- */
 	--c-shadow-gallery: rgba(0, 0, 0, 0.4);
+	--c-shadow-flipper-high: rgba(75, 71, 63, 0.85);
+	--c-shadow-flipper-low: rgba(41, 39, 33, 0.85);
+	--c-shadow-flipper-crease: black;
 	--c-glow-honor-aura: rgb(182, 143, 49);
 }
 

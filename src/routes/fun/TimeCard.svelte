@@ -21,7 +21,6 @@ Status: Ongoing
 		onDestroy(() => clearInterval(interval));
 	};
 
-
 	let topFront = [];
 	let topBack = [];
 	let bottomFront = [];
@@ -34,41 +33,26 @@ Status: Ongoing
 		return digitsLeadingZero;
 	}
 
-	const topFlipStart = () => {
-		topFront = numStringArray;
-	};
-
-	const topFlipEnd = () => {
-		topBack = numStringArray;
-	};
-
-	const bottomFlipStart = () => {
-		bottomFront = numStringArray;
-	};
-
-	const bottomFlipEnd = () => {
-		bottomBack = numStringArray;
-	};
-
-	onMount(() => {
+	const iterateNumbers = () => {
 		topFront = numStringArray;
 		topBack = numStringArray;
 		bottomFront = numStringArray;
 		bottomBack = numStringArray;
-	});
+	};
 
+	onMount(iterateNumbers);
 	onInterval(callback, 1000);
 </script>
 
 <div class="container">
 	{#key number}
 		<div class="wrapper">
-			<div class="top-front">
+			<div class="top-back">
 				{#each topFront as num}
 					<span>{num}</span>
 				{/each}
 			</div>
-			<div class="top-back" on:animationstart={topFlipStart} on:animationend={topFlipEnd}>
+			<div class="top-front" on:animationend={iterateNumbers}>
 				{#each topBack as num}
 					<span>{num}</span>
 				{/each}
@@ -78,7 +62,7 @@ Status: Ongoing
 					<span>{num}</span>
 				{/each}
 			</div>
-			<div class="bottom-back" on:animationstart={bottomFlipStart} on:animationend={bottomFlipEnd}>
+			<div class="bottom-back" on:animationend={iterateNumbers}>
 				{#each bottomBack as num}
 					<span>{num}</span>
 				{/each}
@@ -95,67 +79,65 @@ Status: Ongoing
 		row-gap: 1rem;
 	}
 
-	p {
-		color: var(--c-text-main);
-		/* font-size: var(--fs-large); */
-		/* font-weight: var(--fw-semi-bold); */
-		font-size: 0.5rem;
-		letter-spacing: 3px;
-	}
-
 	.wrapper {
 		display: flex;
 		flex-direction: column;
 		border-radius: 7px;
 		position: relative;
-		box-shadow: 0 10px 5px rgba(0, 0, 0, 0.125);
+		box-shadow: 5px 10px 10px var(--c-shadow-gallery);
 	}
-	
-	.top-front,
+
 	.top-back,
+	.top-front,
 	.bottom-front,
 	.bottom-back {
+		height: 0.65625rem;
 		display: flex;
 		justify-content: center;
 		overflow: hidden;
-		padding: 1.25em 1em;
-		height: 0.5em;
-		line-height: 1.5;
-	}
-	
-	.top-front,
-	.top-back {
+		padding: 1.875rem 1.3125rem;
 		background: var(--c-background-nav);
-		border-bottom: 1px solid black;
-		filter: brightness(85%);
-		border-radius: 7px 7px 0 0;
+		line-height: 0.75;
 	}
 
-	.top-back {
+	.top-back,
+	.top-front {
+		border-radius: 7px 7px 0 0;
+		border-bottom: 1px solid var(--c-shadow-flipper-crease);
+		background: linear-gradient(
+				0deg,
+				var(--c-shadow-flipper-low),
+				rgba(0, 0, 0, 0),
+				rgba(0, 0, 0, 0)
+			),
+			var(--c-background-nav);
+	}
+
+	.bottom-front,
+	.bottom-back {
+		border-radius: 0 0 7px 7px;
+		display: flex;
+		align-items: end;
+		background: linear-gradient(
+				0deg,
+				var(--c-shadow-flipper-high),
+				rgba(0, 0, 0, 0),
+				var(--c-shadow-flipper-low)
+			),
+			var(--c-background-nav);
+	}
+
+	.top-front {
 		position: absolute;
 		width: 100%;
-		top: 0;	
+		top: 0;
 		animation: flip-top 0.25s ease-in;
 		transform-origin: bottom;
 		transform: perspective(200px) rotateX(0);
 	}
 
-	@keyframes flip-top {
-		100% {
-			transform: rotateX(-90deg);
-		}
-	}
-
 	.bottom-front {
 		position: relative;
-	}
-
-	.bottom-front,
-	.bottom-back {
-		display: flex;
-		align-items: end;
-		background: var(--c-background-nav);
-		border-radius: 0 0 7px 7px;
 	}
 
 	.bottom-back {
@@ -164,15 +146,29 @@ Status: Ongoing
 		bottom: 0;
 		animation: flip-bottom 0.25s ease-out 0.25s;
 		transform-origin: top;
-		transform: perspective(300px) rotateX(90deg);
+		transform: perspective(200px) rotateX(90deg);
 	}
-	
+
 	span {
 		display: inline-block;
-		color: red;
-		min-width: 1.75rem;
-		font-size: 2.5rem;
-		line-height: 1;
+		color: var(--c-text-nav);
+		min-width: 2.625rem;
+		font-size: 3.75em;
+		line-height: 1em;
+	}
+
+	p {
+		color: var(--c-text-main);
+		/* font-size: var(--fs-large); */
+		/* font-weight: var(--fw-semi-bold); */
+		font-size: 0.75rem;
+		letter-spacing: 4.5px;
+	}
+
+	@keyframes flip-top {
+		100% {
+			transform: rotateX(-90deg);
+		}
 	}
 
 	@keyframes flip-bottom {
@@ -185,7 +181,10 @@ Status: Ongoing
 		.container {
 			row-gap: 2rem;
 		}
-		.top-front, .top-back, .bottom-front, .bottom-back {
+		.top-back,
+		.top-front,
+		.bottom-front,
+		.bottom-back {
 			padding: 2.5rem 1.75rem;
 			height: 0.875rem;
 			line-height: 1;
