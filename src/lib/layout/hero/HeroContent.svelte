@@ -25,7 +25,7 @@ Status: Ongoing
 			fill="var(--c-text-hover)"
 			href="/rsvp"
 			icon="open-envelope-with-document"
-			type="filled"
+			buttonType="filled"
 			name="RSVP"
 		/>
 
@@ -34,7 +34,7 @@ Status: Ongoing
 				fill="var(--c-text-tonal)"
 				href="/about/schedule"
 				icon="checked-calendar"
-				type="tonal"
+				buttonType="tonal"
 				name="Schedule"
 			/>
 		</div>

@@ -8,33 +8,32 @@ Status: Okay
 -->
 
 <script>
-	export let type = '';
+	export let buttonType = '';
+	export let type = null;
+	export let disabled = false;
 	export let name = 'Button';
 	export let href = '';
 	export let target = '';
 	export let icon = '';
 	export let fill = 'var(--c-text-main)';
+	export let onClickFunc = null;
 
 	import { iconLibrary } from '$lib';
 	import Icon from './Icon.svelte';
 </script>
 
 {#if href}
-	<a {href} {target} {...$$restProps} class={`button-${type}`}>
+	<a href={!disabled ? href : ''} {target} {...$$restProps} class={`button-${buttonType}`} class:disabled>
 		{#if icon}
 			<div class="icon-container">
-				<Icon
-					{fill}
-					path={iconLibrary[`${icon}`].path}
-					viewBox={iconLibrary[`${icon}`].viewBox}
-				/>
+				<Icon {fill} path={iconLibrary[`${icon}`].path} viewBox={iconLibrary[`${icon}`].viewBox} />
 			</div>
 		{/if}
 		{name}
 	</a>
 {:else}
-	<button on:click title={name}>
-		<div {...$$restProps} class={`button-${type}`}>
+	<button on:click={onClickFunc} title={name} {disabled} {type} >
+		<div {...$$restProps} class={`button-${buttonType}`} class:disabled>
 			{#if icon}
 				<div class="icon-container">
 					<Icon
@@ -51,6 +50,7 @@ Status: Okay
 
 <style>
 	button {
+		border-radius: 100px;
 		margin: 0;
 		padding: 0;
 		border: none;
@@ -61,6 +61,11 @@ Status: Okay
 		padding: 16px 24px;
 		background: var(--c-accent-modes);
 		color: var(--c-text-active);
+	}
+
+	.button-filled.disabled {
+		background: lightgray;
+		color: white;
 	}
 
 	.button-text {
@@ -92,11 +97,22 @@ Status: Okay
 		cursor: pointer;
 	}
 
+	a.disabled, div.disabled {
+		cursor: not-allowed;
+	}
+
 	a:hover,
 	a:focus,
 	div:hover,
 	div:focus {
 		filter: brightness(85%);
+	}
+
+	a.disabled:hover,
+	a.disabled:focus,
+	div.disabled:hover,
+	div.disabled:focus {
+		filter: none;
 	}
 
 	.icon-container {
