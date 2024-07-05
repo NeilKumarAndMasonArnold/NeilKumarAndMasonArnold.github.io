@@ -4,7 +4,7 @@ Renders different types of checkboxes with an option of an icon.  Currently
 loosely based on material design 3.
 
 Author: Neil A. Kumar (2024)
-Status: Ongoing
+Status: Okay
 -->
 
 <script>
