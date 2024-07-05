@@ -8,6 +8,7 @@ Status: Ongoing
 -->
 
 <script>
+	//@ts-nocheck
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 	import { fly } from 'svelte/transition';
@@ -21,6 +22,7 @@ Status: Ongoing
 	import Scrim from './mobile/Scrim.svelte';
 
 	let menuOpen = false;
+	$: secretPage = $page.url.pathname === '/testpage' || $page.url.pathname === '/fun';
 	let y;
 
 	onMount(() => {
@@ -42,6 +44,9 @@ Status: Ongoing
 				{#each pageTree as page}
 					<NavButton href={page.link} name={page.name} subpages={page.subpages} />
 				{/each}
+				{#if secretPage}
+					<NavButton href={$page.url.pathname} name="Secret Page!" />
+				{/if}
 			</ul>
 
 			<div id="theme-navigation">

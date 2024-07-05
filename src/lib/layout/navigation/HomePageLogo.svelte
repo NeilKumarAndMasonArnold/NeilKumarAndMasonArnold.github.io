@@ -34,6 +34,10 @@ Status: Complete
 		text-decoration: none;
 	}
 
+	a:hover, a:focus {
+		background: var(--c-background-hover);
+	}
+
 	h1 {
 		color: var(--c-text-main);
 		font-size: 2rem;

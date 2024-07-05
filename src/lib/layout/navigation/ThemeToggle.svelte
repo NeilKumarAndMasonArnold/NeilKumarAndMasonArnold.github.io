@@ -88,6 +88,7 @@ Status: Okay
 
 	#theme-toggle:focus ~ label {
 		outline: 2px solid var(--c-accent-modes);
+		background: var(--c-background-hover);
 	}
 
 	#theme-toggle:checked ~ label #switch-graphic-container {
@@ -154,6 +155,10 @@ Status: Okay
 		align-items: center;
 		justify-content: center;
 		cursor: pointer;
+	}
+
+	label:hover {
+		background: var(--c-background-hover);
 	}
 
 	#switch-graphic-container {

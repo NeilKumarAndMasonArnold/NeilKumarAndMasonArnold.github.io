@@ -41,12 +41,16 @@
 	<h2>Text Input</h2>
 	<div class="container">
 		<div class="subcontainer">
-			<TextInput id="text1" label="Label text" />
-			<TextInput id="text3" label="Label text" error="Error message" />
+			<TextInput id="text1" label="Enabled" />
+			<TextInput id="text2" label="Enabled With Input" value="Inputted Text"/>
+			<TextInput id="text3" label="Error Enabled" error="Error Message" />
+			<TextInput id="text4" label="Error Enabled With Input" value="Inputted Text" error="Error Message" />
 		</div>
 		<div class="subcontainer">
-			<TextInput id="text2" label="Disabled" disabled={true} />
-			<TextInput id="text4" label="Error Disabled" error="Error message" disabled={true} />
+			<TextInput id="text5" label="Disabled" disabled={true} />
+			<TextInput id="text6" label="Disabled With Input" value="Inputted Text" disabled={true} />
+			<TextInput id="text7" label="Error Disabled" error="Error Message" disabled={true} />
+			<TextInput id="text8" label="Error Disabled With Input" value="Inputted Text" error="Error Message" disabled={true} />
 		</div>
 	</div>
 </div>
