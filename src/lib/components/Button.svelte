@@ -20,10 +20,30 @@ Status: Okay
 
 	import { iconLibrary } from '$lib';
 	import Icon from './Icon.svelte';
+
+	if (disabled) {
+		if (buttonType == 'text') {
+			fill = 'var(--c-background-disabled)';
+		} else {
+			fill = 'var(--c-text-disabled)';
+		}
+	} else if (buttonType == 'filled') {
+		fill = 'var(--c-text-active)';
+	} else if (buttonType == 'text') {
+		fill = 'var(--c-accent-modes)';
+	} else if (buttonType == 'tonal') {
+		fill = 'var(--c-text-tonal)';
+	}
 </script>
 
 {#if href}
-	<a href={!disabled ? href : ''} {target} {...$$restProps} class={`button-${buttonType}`} class:disabled>
+	<a
+		href={!disabled ? href : ''}
+		{target}
+		{...$$restProps}
+		class={`button-${buttonType}`}
+		class:disabled
+	>
 		{#if icon}
 			<div class="icon-container">
 				<Icon {fill} path={iconLibrary[`${icon}`].path} viewBox={iconLibrary[`${icon}`].viewBox} />
@@ -32,7 +52,7 @@ Status: Okay
 		{name}
 	</a>
 {:else}
-	<button on:click={onClickFunc} title={name} {disabled} {type} >
+	<button on:click={onClickFunc} title={name} {disabled} {type}>
 		<div {...$$restProps} class={`button-${buttonType}`} class:disabled>
 			{#if icon}
 				<div class="icon-container">
@@ -64,20 +84,38 @@ Status: Okay
 	}
 
 	.button-filled.disabled {
-		background: lightgray;
-		color: white;
+		background: var(--c-background-disabled);
+		color: var(--c-text-disabled);
 	}
 
 	.button-text {
+		padding: 16px 24px;
 		color: var(--c-accent-modes);
 		font-weight: var(--fw-medium);
 		letter-spacing: var(--ls-normal);
+	}
+
+	.button-text:hover {
+		background: var(--c-background-hover);
+	}
+
+	.button-text.disabled {
+		color: var(--c-background-disabled);
+	}
+
+	.button-text.disabled:hover {
+		background: transparent;
 	}
 
 	.button-tonal {
 		padding: 16px 24px;
 		background: var(--c-background-nav);
 		color: var(--c-text-tonal);
+	}
+
+	.button-tonal.disabled {
+		background: var(--c-background-disabled);
+		color: var(--c-text-disabled);
 	}
 
 	a,
@@ -97,7 +135,9 @@ Status: Okay
 		cursor: pointer;
 	}
 
-	a.disabled, div.disabled {
+	a.disabled,
+	div.disabled,
+	.disabled .icon-container {
 		cursor: not-allowed;
 	}
 
@@ -111,7 +151,9 @@ Status: Okay
 	a.disabled:hover,
 	a.disabled:focus,
 	div.disabled:hover,
-	div.disabled:focus {
+	div.disabled:focus,
+	.disabled .icon-container:hover,
+	.disabled .icon-container:focus {
 		filter: none;
 	}
 
