@@ -14,8 +14,7 @@
 <style>
 	main {
 		margin-inline: auto;
-		margin-top: 7rem;
-		width: 87%;
+		width: 90%;
 	}
 
 	div#mainContent {
@@ -23,7 +22,7 @@
 		display: flex;
 		justify-content: center;
 		text-align: center;
-		margin-top: 80px;
+		margin-top: 110px;
 	}
 
 	@media (min-width: 767px) {

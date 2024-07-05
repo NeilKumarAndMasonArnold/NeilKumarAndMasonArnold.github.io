@@ -105,33 +105,31 @@ Status: Ongoing
 			let moveOn = await getGuestInfo();
 			if (moveOn) {
 				stageNum++;
-				progressBar.handleProgress(+1)
+				progressBar.handleProgress(+1);
 			}
 		} else {
 			stageNum++;
 			progressBar.handleProgress(+1);
 		}
-	}
+	};
 </script>
 
 <form on:submit={handleSubmit}>
 	{#if currentStage == 'GuestID'}
 		<div class="form-wrapper" in:fly={{ x: 50, duration: 1000, easing: quintOut }}>
 			<h2>Who are you?</h2>
-			<TextInput label="Guest ID" required={true} bind:value={rsvpData.ID} />
-			<!-- <InputField bind:value={rsvpData.ID} label="Enter Your Guest ID" /> -->
+			<TextInput
+				label="Please Enter Your Guest ID"
+				required={true}
+				bind:value={rsvpData.ID}
+				error={errMessage}
+			/>
 			{#if dataloading}
 				<div class="loader">
 					<Loader />
 				</div>
 			{:else if errMessage}
-				<div class="error" in:fly={{ y: 20, duration: 200, easing: quintOut }}>
-					<span>Error:</span>
-					<p>
-						{errMessage}
-					</p>
-				</div>
-				<div class="suggestion" in:fly={{ y: 20, duration: 200, easing: quintOut, delay: 100 }}>
+				<div class="suggestion" in:fly={{ y: 20, duration: 200, easing: quintOut }}>
 					<span>Suggestion:</span>
 					<p>
 						{@html errSuggestion}
@@ -158,10 +156,10 @@ Status: Ongoing
 
 <style>
 	form {
-		width: 60vw;
-		min-height: 30vh;
+		width: 100%;
+		height: calc(90vh - 216px); /* (100vh - 240px)*90% */
 		border-radius: 20px;
-		margin-bottom: 2rem;
+		margin-bottom: 17px;
 	}
 
 	.form-wrapper {
@@ -188,16 +186,6 @@ Status: Ongoing
 
 	p {
 		color: var(--c-text-main);
-	}
-
-	.error {
-		background: #ffdddd;
-		border-left: 6px solid #f44336;
-		color: black;
-		text-align: left;
-		margin: 0.5rem;
-		margin-bottom: 0;
-		padding: 0.5rem;
 	}
 
 	.suggestion {

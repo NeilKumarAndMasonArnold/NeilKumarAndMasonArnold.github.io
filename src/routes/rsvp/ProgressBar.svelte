@@ -50,11 +50,11 @@ Status: Ongoing
 
 <style>
 	.container {
+		width: 90%;
 		display: flex;
 		justify-content: space-between;
 		position: relative;
 		margin-bottom: 30px;
-		width: 350px;
 	}
 
 	.container::before {

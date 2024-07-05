@@ -38,7 +38,7 @@
 
 	<div class="stageButtons">
 		<Button
-			buttonType="filled"
+			buttonType="tonal"
 			name="Prev"
 			onClickFunc={() => handleProgress(-1)}
 			disabled={currentStage == 1}
@@ -59,5 +59,13 @@
 		flex-direction: column;
 		align-items: center;
 		margin-top: 30px;
+		width: 100%;
+		max-width: 750px;
+	}
+
+	.stageButtons {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
 	}
 </style>

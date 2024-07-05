@@ -9,6 +9,7 @@ Status: Okay
 
 <script>
 	export let id = 'textInput';
+	export let type = 'outlined';
 	export let label = '';
 	export let value = '';
 	export let placeholder = '';
@@ -29,7 +30,7 @@ Status: Okay
 	};
 </script>
 
-<div class="text-field" class:focused class:filled class:error class:disabled>
+<div class="textfield-{type}" class:focused class:filled class:error class:disabled>
 	<input
 		{id}
 		type="text"
@@ -43,69 +44,86 @@ Status: Okay
 	/>
 	<label for={id}>{label}</label>
 	{#if error}
-		<div class="error">{error}</div>
+		<div class="error error-label">{error}</div>
 	{/if}
 </div>
 
 <style>
-	.text-field {
-		position: relative;
-		margin-bottom: 1rem;
-	}
-
-	.text-field.focused input,
-	.text-field.filled input {
-		border-color: var(--c-background-active);
-	}
-
-	.text-field.focused label,
-	.text-field.filled label {
-		transform: translateY(-1.5rem) scale(0.75);
-		color: var(--c-text-nav);
-		background: var(--c-background-nav);
-		padding: 0 0.25rem;
-	}
-
-	.text-field.error {
-		color: #b3261e;
-		font-size: 0.75rem;
-		margin-top: 0.25rem;
-	}
-
-	.text-field.error input {
-		border-color: #b3261e;
-	}
-
-	.text-field.error label {
-		color: #b3261e;
-	}
-
-	.text-field.disabled input {
-		background: var(--c-background-disabled);
-		border-color: var(--c-text-disabled);
-		color: var(--c-text-disabled);
-	}
-
-	.text-field.disabled label {
-		color: var(--c-text-disabled);
-	}
-
 	input {
-		border-radius: 4px;
 		width: 100%;
-		padding: 1rem;
-		font-size: 1rem;
-		border: 1px solid var(--c-background-active);
-		background: var(--c-background-nav);
+		padding: 0 16px;
+		height: 56px;
+		line-height: 24px;
+		font-size: 16px;
+		border: 1px solid var(--c-text-main);
+		margin: 1px;
+		caret-color: var(--c-background-active);
 	}
 
 	label {
 		position: absolute;
-		left: 1rem;
-		top: 1rem;
-		font-size: 1rem;
-		color: var(--c-text-nav);
-		transition: all 0.2s ease-in-out;
+		top: 16px;
+		left: 16px;
+		line-height: 24px;
+		font-size: 16px;
+		color: var(--c-text-main);
 		pointer-events: none;
+	}
+
+	.textfield-outlined {
+		position: relative;
+		background: inherit;
+	}
+
+	.textfield-outlined.disabled input {
+		cursor: not-allowed;
+	}
+
+	.textfield-outlined input {
+		border-radius: 4px;
+		background: inherit;
+	}
+
+	.textfield-outlined.focused input,
+	.textfield-outlined.filled input {
+		border: 2px solid var(--c-background-active);
+		margin: 0;
+		outline: none;
+	}
+
+	.textfield-outlined.focused label,
+	.textfield-outlined.filled label {
+		font-size: 12px;
+		line-height: 16px;
+		transform: translateY(-24px);
+		color: var(--c-text-main);
+		background: inherit;
+		padding: 0 4px;
+	}
+
+	.textfield-outlined.error,
+	.textfield-outlined.error label {
+		color: #f44336;
+	}
+
+	.textfield-outlined.error input {
+		border-color: #f44336;
+		caret-color: #f44336;
+	}
+
+	.error-label.error {
+		text-align: left;
+		font-size: 12px;
+		line-height: 16px;
+		margin-left: 16px;
+	}
+
+	.textfield-outlined.disabled label {
+		color: var(--c-background-disabled);
+	}
+
+	.textfield-outlined.disabled input {
+		border: 1px solid var(--c-background-disabled);
+		color: var(--c-background-disabled);
 	}
 </style>

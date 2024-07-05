@@ -41,8 +41,8 @@
 	<h2>Text Input</h2>
 	<div class="container">
 		<div class="subcontainer">
-			<TextInput id="text1" label="Enabled" />
-			<TextInput id="text3" label="Error Enabled" error="Error message" />
+			<TextInput id="text1" label="Label text" />
+			<TextInput id="text3" label="Label text" error="Error message" />
 		</div>
 		<div class="subcontainer">
 			<TextInput id="text2" label="Disabled" disabled={true} />
@@ -71,5 +71,6 @@
 		display: flex;
 		flex-direction: row;
 		gap: 2rem;
+		background: var(--c-background-main);
 	}
 </style>

@@ -48,6 +48,9 @@ Status: Complete
 	}
 
 	@media (min-width: 768px) {
+		a {
+			border-radius: 10px;
+		}
 		h1 {
 			display: none;
 		}
