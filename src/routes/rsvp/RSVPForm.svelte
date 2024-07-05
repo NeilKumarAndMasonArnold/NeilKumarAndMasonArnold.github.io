@@ -13,8 +13,8 @@ Status: Ongoing
 
 	import { fly } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
-	import InputField from '$lib/components/InputField.svelte';
 	import Loader from '$lib/components/Loader.svelte';
+	import TextInput from '$lib/components/TextInput.svelte';
 
 	let guestInfo = null;
 	let errMessage = '';
@@ -118,7 +118,8 @@ Status: Ongoing
 	{#if currentStage == 'GuestID'}
 		<div class="form-wrapper" in:fly={{ x: 50, duration: 1000, easing: quintOut }}>
 			<h2>Who are you?</h2>
-			<InputField bind:value={rsvpData.ID} label="Enter Your Guest ID" />
+			<TextInput label="Guest ID" required={true} bind:value={rsvpData.ID} />
+			<!-- <InputField bind:value={rsvpData.ID} label="Enter Your Guest ID" /> -->
 			{#if dataloading}
 				<div class="loader">
 					<Loader />

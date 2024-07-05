@@ -1,6 +1,7 @@
 <script>
 	import Button from '$lib/components/Button.svelte';
 	import Checkbox from '$lib/components/Checkbox.svelte';
+	import TextInput from '$lib/components/TextInput.svelte';
 </script>
 
 <div class="wrapper">
@@ -33,8 +34,20 @@
 
 	<h2>Checkboxes</h2>
 	<div class="container">
-		<Checkbox name="Checkbox-Enabled" />
-		<Checkbox name="Checkbox-Disabled" disabled={true} />
+		<Checkbox name="Checkbox Enabled" />
+		<Checkbox name="Checkbox Disabled" disabled={true} />
+	</div>
+
+	<h2>Text Input</h2>
+	<div class="container">
+		<div class="subcontainer">
+			<TextInput id="text1" label="Enabled" />
+			<TextInput id="text3" label="Error Enabled" error="Error message" />
+		</div>
+		<div class="subcontainer">
+			<TextInput id="text2" label="Disabled" disabled={true} />
+			<TextInput id="text4" label="Error Disabled" error="Error message" disabled={true} />
+		</div>
 	</div>
 </div>
 
