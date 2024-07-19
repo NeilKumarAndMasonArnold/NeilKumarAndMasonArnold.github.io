@@ -31,6 +31,8 @@ Status: Okay
 		fill = 'var(--c-text-active)';
 	} else if (buttonType == 'text') {
 		fill = 'var(--c-accent-modes)';
+	} else if (buttonType == 'outlined') {
+		fill = 'var(--c-background-active';
 	} else if (buttonType == 'tonal') {
 		fill = 'var(--c-text-tonal)';
 	}
@@ -43,8 +45,9 @@ Status: Okay
 		{...$$restProps}
 		class={`button-${buttonType}`}
 		class:disabled
+		class:placeholder={icon === 'placeholder'}
 	>
-		{#if icon}
+		{#if icon && icon !== 'placeholder'}
 			<div class="icon-container">
 				<Icon {fill} path={iconLibrary[`${icon}`].path} viewBox={iconLibrary[`${icon}`].viewBox} />
 			</div>
@@ -53,8 +56,13 @@ Status: Okay
 	</a>
 {:else}
 	<button on:click={onClickFunc} title={name} {disabled} {type}>
-		<div {...$$restProps} class={`button-${buttonType}`} class:disabled>
-			{#if icon}
+		<div
+			{...$$restProps}
+			class={`button-${buttonType}`}
+			class:disabled
+			class:placeholder={icon === 'placeholder'}
+		>
+			{#if icon && icon !== 'placeholder'}
 				<div class="icon-container">
 					<Icon
 						{fill}
@@ -118,6 +126,25 @@ Status: Okay
 		color: var(--c-text-disabled);
 	}
 
+	.button-outlined {
+		padding: 16px 24px;
+		outline: 1px solid var(--c-background-active);
+		color: var(--c-background-active);
+	}
+
+	.button-outlined:hover {
+		background: var(--c-background-hover);
+	}
+
+	.button-outlined.disabled {
+		outline: 1px solid var(--c-background-disabled);
+		color: var(--c-background-disabled);
+	}
+
+	.button-outlined.disabled:hover {
+		background: transparent;
+	}
+
 	a,
 	div {
 		min-width: max-content;
@@ -159,5 +186,18 @@ Status: Okay
 
 	.icon-container {
 		width: 1rem;
+	}
+
+	.button-filled.placeholder,
+	.button-filled.placeholder.disabled,
+	.button-text.placeholder,
+	.button-text.placeholder.disabled,
+	.button-tonal.placeholder,
+	.button-tonal.placeholder.disabled,
+	.button-outlined.placeholder,
+	.button-outlined.placeholder.disabled {
+		padding-left: calc(24px + 0.5rem + 12px);
+		padding-right: calc(24px + 0.5rem + 12px);
+		height: 56px;
 	}
 </style>

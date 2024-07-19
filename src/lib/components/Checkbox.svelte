@@ -9,12 +9,21 @@ Status: Okay
 
 <script>
 	export let name = 'Unlabeld Checkbox';
+	export let checked = false;
+	export let required = false;
 	export let disabled = false;
 </script>
 
 <label for="{name}-checkbox" class:disabled>
 	<div class="statelayer">
-		<input type="checkbox" {name} {disabled} {...$$restProps} id="{name}-checkbox" />
+		<input 
+			id="{name}-checkbox"
+			type="checkbox"
+			{required}
+			{name}
+			bind:checked
+			{disabled}
+		/>
 	</div>
 	<p>
 		{name}

@@ -1,55 +1,37 @@
 <script>
-	//@ts-nocheck
 	import { fly } from 'svelte/transition';
 	import { quintOut } from 'svelte/easing';
-	import RSVPForm from './RSVPForm.svelte';
-	import Button from '$lib/components/Button.svelte';
-	import ProgressBar from './ProgressBar.svelte';
+	import NameInput from './NameInput.svelte';
+	import NameSearch from './NameSearch.svelte';
+	import PartySelect from './PartySelect.svelte';
+	import PartySearch from './PartySearch.svelte';
+	import Rsvp from './RSVP.svelte';
 
-	let stages = ['GuestID', 'GuestInfo', 'GuestInfo2'];
-	let currentStage = 1;
-	let moveOn;
-	let progressBar, rsvpForm;
+	let stages = ['nameinput', 'gettinginfo', 'partyselect', 'getrsvpinfo', 'rsvp'];
+	let stage = 0;
+	let error = '';
+	let errSuggestion = '';
+	let name = '';
+	let parties = [''];
+	let guestsInfo;
 
-	const handleProgress = async (stepIncrement) => {
-		if (currentStage == 1) {
-			moveOn = await rsvpForm.getGuestInfo();
-			if (moveOn) {
-				progressBar.handleProgress(stepIncrement);
-			}
-		} else {
-			progressBar.handleProgress(stepIncrement);
-		}
-	};
+	$: currentStage = stages[stage];
 </script>
 
-<svelte:head>
-	<title>RSVP</title>
-</svelte:head>
-
-<div class="wrapper" in:fly={{ y: 10, easing: quintOut, duration: 750 }}>
-	<ProgressBar {stages} bind:currentStage bind:this={progressBar} />
-	<RSVPForm
-		currentStage={stages[currentStage - 1]}
-		bind:stageNum={currentStage}
-		bind:progressBar
-		bind:this={rsvpForm}
-	/>
-
-	<div class="stageButtons">
-		<Button
-			buttonType="tonal"
-			name="Prev"
-			onClickFunc={() => handleProgress(-1)}
-			disabled={currentStage == 1}
-		/>
-		<Button
-			buttonType="filled"
-			name="Next"
-			onClickFunc={() => handleProgress(+1)}
-			disabled={currentStage == stages.length}
-			type="submit"
-		/>
+<div class="wrapper">
+	<h1 in:fly={{ y: 10, easing: quintOut, duration: 750 }}>RSVP</h1>
+	<div class="form-container">
+		{#if currentStage == 'nameinput'}
+			<NameInput bind:stage bind:value={name} bind:error bind:errSuggestion />
+		{:else if currentStage == 'gettinginfo'}
+			<NameSearch bind:stage bind:name bind:parties bind:guestsInfo bind:error bind:errSuggestion />
+		{:else if currentStage == 'partyselect'}
+			<PartySelect bind:stage bind:parties />
+		{:else if currentStage == 'getrsvpinfo'}
+			<PartySearch party={parties[0]} bind:stage bind:guestsInfo />
+		{:else if currentStage == 'rsvp'}
+			<Rsvp bind:stage {guestsInfo} />
+		{/if}
 	</div>
 </div>
 
@@ -57,15 +39,29 @@
 	.wrapper {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
-		margin-top: 30px;
-		width: 100%;
-		max-width: 750px;
+		gap: 1rem;
+		background: var(--c-background-main);
 	}
 
-	.stageButtons {
-		width: 100%;
+	h1 {
+		color: var(--c-text-main);
+	}
+
+	.form-container {
+		padding: 3rem;
+		height: 100%;
+		border-radius: 25px;
+		width: 90vw;
+		max-width: 900px;
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
+		align-items: center;
+		border: 1px solid var(--c-text-main);
+	}
+
+	@media (min-width: 767px) {
+		.form-container {
+			border: 1px solid var(--c-text-main);
+		}
 	}
 </style>
