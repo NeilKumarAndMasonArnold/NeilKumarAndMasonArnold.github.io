@@ -10,7 +10,7 @@
 	import { onMount } from 'svelte';
 
 	const SCRIPT_URL =
-		'https://script.google.com/macros/s/AKfycbxhdXeWCIxyxuKZ7J0AUFP9thTCIJpFDUFn4sIbjAqx7PYkkcmX2x1t2_WIXBkdN5Zb/exec';
+		'https://script.google.com/macros/s/AKfycbzuA0bqxydHXGhJoZs_nqAMixSMTuF0CGEfpNkWLWN-tWwwmiDrXlU1K2Kgp4XDLWCP/exec';
 
 	onMount(() => {
 		error = '';

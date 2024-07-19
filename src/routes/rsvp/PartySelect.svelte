@@ -1,6 +1,7 @@
 <script>
 	export let stage = 2;
 	export let parties = [''];
+	export let name = '';
 
 	import Button from '$lib/components/Button.svelte';
 	import RadioInput from '$lib/components/RadioInput.svelte';
@@ -12,6 +13,9 @@
 			parties = [parties[selectedParty-1]];
 			stage = 3;
 		} else if (status === 'goBack' || (status === '' && !selectedParty)) {
+			if (name === 'i solemnly swear that i am up to no good a b c d e f g h i j k l m n o p q r s t u v w x y z') {
+				name = '';
+			}
 			stage = 0;
 		}
 	};

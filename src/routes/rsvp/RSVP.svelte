@@ -18,7 +18,7 @@
 			},
 			decline: {
 				Invited: 'outlined',
-				Attending: 'text',
+				Attending: 'outlined',
 				Declined: 'tonal'
 			}
 		};

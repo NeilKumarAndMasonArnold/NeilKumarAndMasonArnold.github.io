@@ -30,7 +30,7 @@
 			value.toLowerCase() === "i solemnly swear i'm up to no good" ||
 			value.toLowerCase() === 'i solemnly swear that i am up to no good'
 		) {
-			value = ' ';
+			value = 'i solemnly swear that i am up to no good a b c d e f g h i j k l m n o p q r s t u v w x y z';
 			stage = 1;
 		} else {
 			stage = 1;

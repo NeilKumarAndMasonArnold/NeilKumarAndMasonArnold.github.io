@@ -26,7 +26,7 @@
 		{:else if currentStage == 'gettinginfo'}
 			<NameSearch bind:stage bind:name bind:parties bind:guestsInfo bind:error bind:errSuggestion />
 		{:else if currentStage == 'partyselect'}
-			<PartySelect bind:stage bind:parties />
+			<PartySelect bind:stage bind:parties bind:name />
 		{:else if currentStage == 'getrsvpinfo'}
 			<PartySearch party={parties[0]} bind:stage bind:guestsInfo />
 		{:else if currentStage == 'rsvp'}
