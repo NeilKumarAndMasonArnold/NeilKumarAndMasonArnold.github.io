@@ -56,7 +56,6 @@ Status: Ongoing
 		float: right;
 		overflow: hidden;
 		user-select: none;
-		z-index: -1;
 	}
 
 	div.hero-image img {
@@ -75,8 +74,7 @@ Status: Ongoing
 		div.hero-image {
 			height: 70vh;
 			width: 30vw;
-            max-height: 70rem;
-			z-index: -1;
+			max-height: 70rem;
 		}
 	}
 </style>

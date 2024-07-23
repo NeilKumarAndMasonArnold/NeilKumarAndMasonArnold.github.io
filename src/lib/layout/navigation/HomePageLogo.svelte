@@ -34,6 +34,10 @@ Status: Complete
 		text-decoration: none;
 	}
 
+	a:hover, a:focus {
+		background: var(--c-background-hover);
+	}
+
 	h1 {
 		color: var(--c-text-main);
 		font-size: 2rem;
@@ -48,6 +52,9 @@ Status: Complete
 	}
 
 	@media (min-width: 768px) {
+		a {
+			border-radius: 10px;
+		}
 		h1 {
 			display: none;
 		}

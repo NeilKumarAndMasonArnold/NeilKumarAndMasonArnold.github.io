@@ -99,11 +99,12 @@ body {
 	--c-gradient-2: rgb(83, 157, 137);
 	--c-gradient-3: rgb(102, 143, 225);
 
-	/* ---- TEXTS ---- */
-	--c-text-link: rgb(182, 143, 49);
-
 	/* ---- BACKGROUNDS ---- */
 	--c-background-hover: rgba(182, 143, 49, 0.2);
+
+	/* ---- TEXTS ---- */
+	--c-text-link: rgb(182, 143, 49);
+	--c-text-error: rgb(244, 67, 54);
 
 	/* ---- THEME-TOGGLE COLORS ---- */
 	--c-toggle-sky-day: rgb(173, 207, 245);
@@ -129,6 +130,8 @@ body.light-theme {
 	--c-background-main: rgb(248, 245, 236);
 	--c-background-nav: rgb(236, 225, 198);
 	--c-background-active: rgb(229, 193, 103);
+	--c-background-disabled: rgba(0, 0, 0, 0.12);
+	--c-background-error: rgb(252, 214, 214);
 
 	/* ---- TEXTS ---- */
 	--c-text-main: rgb(19, 16, 7);
@@ -136,6 +139,7 @@ body.light-theme {
 	--c-text-hover: rgb(0, 0, 0);
 	--c-text-active: rgb(0, 0, 0);
 	--c-text-tonal: rgb(80, 69, 22);
+	--c-text-disabled: rgba(255, 255, 255, 0.8);
 	
 	/* ---- SHADOWS and GLOWS ---- */
 	--c-shadow-gallery: rgba(0, 0, 0, 0.2);
@@ -156,6 +160,8 @@ body.dark-theme {
 	--c-background-main: rgb(44, 41, 32);
 	--c-background-nav: rgb(69, 66, 59);
 	--c-background-active: rgb(182, 143, 49);
+	--c-background-disabled: rgba(255, 255, 255, 0.32);
+	--c-background-error: rgb(69, 66, 59);
 
 	/* ---- TEXTS ---- */
 	--c-text-main: rgb(206, 197, 176);
@@ -163,6 +169,7 @@ body.dark-theme {
 	--c-text-hover: rgb(255, 255, 255);
 	--c-text-active: rgb(255, 255, 255);
 	--c-text-tonal: rgb(234, 214, 179);
+	--c-text-disabled: rgba(255, 255, 255, 0.38);
 
 	/* ---- SHADOWS and GLOWS ---- */
 	--c-shadow-gallery: rgba(0, 0, 0, 0.4);

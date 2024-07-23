@@ -6,29 +6,37 @@
 <Navigation />
 
 <main>
-	<div id="mainContent">
-		<slot />
+	<div class="wrapper">
+		<div id="mainContent">
+			<slot />
+		</div>
 	</div>
 </main>
 
 <style>
 	main {
+		width: 100%;
+		background: var(--c-background-main);
+	}
+
+	.wrapper {
 		margin-inline: auto;
-		margin-top: 7rem;
-		width: 87%;
+		width: 90%;
 	}
 
 	div#mainContent {
 		height: max-content;
+		min-height: calc(100vh - 80px);
 		display: flex;
 		justify-content: center;
 		text-align: center;
 		margin-top: 80px;
+		padding: 40px 0;
+		background: var(--c-background-main);
 	}
 
 	@media (min-width: 767px) {
 		div#mainContent {
-			height: calc(100vh - 120px);
 			flex-direction: row;
 			gap: 5vw;
 		}
@@ -41,7 +49,7 @@
 	}
 
 	@media (min-width: 1700) {
-		main {
+		.wrapper {
 			width: min(87%, 100rem);
 		}
 
