@@ -189,7 +189,7 @@
 		{:else}
 			<Button
 				buttonType="filled"
-				name="SUBMIT"
+				name="SEND RSVP"
 				type="submit"
 				onClickFunc={handleSubmit}
 				icon="rsvp-submit"

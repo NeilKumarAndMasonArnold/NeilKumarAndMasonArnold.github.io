@@ -66,4 +66,4 @@
 	}
 </script>
 
-<Loader />
+<Loader customMsg="Sending..." />

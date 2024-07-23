@@ -2,7 +2,11 @@
 LOERuthaseonuthasotuneha.suhadbesknthqeus;thkda.spunhtosenuthaoenu
 -->
 
-<div class="loader" />
+<script>
+	export let customMsg = "Loading...";
+</script>
+
+<div class="loader" data-content={customMsg} />
 
 <style>
 	.loader {
@@ -17,7 +21,7 @@ LOERuthaseonuthasotuneha.suhadbesknthqeus;thkda.spunhtosenuthaoenu
 	}
 
 	.loader::before {
-		content: 'Loading...';
+		content: attr(data-content);
 	}
 
 	@keyframes spiderverse {
