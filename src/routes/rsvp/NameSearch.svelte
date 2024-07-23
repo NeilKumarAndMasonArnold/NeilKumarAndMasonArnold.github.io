@@ -5,12 +5,10 @@
 	export let errSuggestion = '';
 	export let error = '';
 	export let guestsInfo;
+	export let SCRIPT_URL = '';
 
 	import Loader from '$lib/components/Loader.svelte';
 	import { onMount } from 'svelte';
-
-	const SCRIPT_URL =
-		'https://script.google.com/macros/s/AKfycbzuA0bqxydHXGhJoZs_nqAMixSMTuF0CGEfpNkWLWN-tWwwmiDrXlU1K2Kgp4XDLWCP/exec';
 
 	onMount(() => {
 		error = '';

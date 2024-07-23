@@ -1,7 +1,7 @@
 <!--
 Button Component (Button.svelte)
-Renders different types of button with an option of an icon.  Currently loosely 
-based on material design 3.
+Renders different types of button with an option of an icon on either side.
+Currently loosely based on material design 3.
 
 Author: Neil A. Kumar (2024)
 Status: Okay
@@ -15,27 +15,59 @@ Status: Okay
 	export let href = '';
 	export let target = '';
 	export let icon = '';
+	export let iconLocation = 'left';
 	export let fill = 'var(--c-text-main)';
 	export let onClickFunc = null;
+	export let customTextColor = '';
+	export let customBackgroundColor = '';
+	export let customOutlineColor = '';
 
 	import { iconLibrary } from '$lib';
+	import { fly } from 'svelte/transition';
+	import { quintOut } from 'svelte/easing';
 	import Icon from './Icon.svelte';
 
-	if (disabled) {
-		if (buttonType == 'text') {
-			fill = 'var(--c-background-disabled)';
+	$: {
+		if (disabled) {
+			// If the button is disabled, ensure the disabled fill
+			fill =
+				buttonType === 'text' || buttonType === 'outlined'
+					? 'var(--c-background-disabled)'
+					: 'var(--c-text-disabled)';
 		} else {
-			fill = 'var(--c-text-disabled)';
+			// Otherwise, base the fill on the text color
+			switch (buttonType) {
+				case 'filled':
+					fill = customTextColor || 'var(--c-text-active)';
+					break;
+				case 'text':
+					fill = customTextColor || 'var(--c-accent-modes)';
+					break;
+				case 'outlined':
+					fill = customTextColor || 'var(--c-background-active)';
+					break;
+				case 'tonal':
+					fill = customTextColor || 'var(--c-text-tonal)';
+					break;
+				default:
+					fill = 'red'; // This shouldn't happen, so red
+			}
 		}
-	} else if (buttonType == 'filled') {
-		fill = 'var(--c-text-active)';
-	} else if (buttonType == 'text') {
-		fill = 'var(--c-accent-modes)';
-	} else if (buttonType == 'outlined') {
-		fill = 'var(--c-background-active';
-	} else if (buttonType == 'tonal') {
-		fill = 'var(--c-text-tonal)';
 	}
+
+	$: buttonStyle = (() => {
+		let style = '';
+		if (customTextColor && !disabled) {
+			style += `color: ${customTextColor};`;
+		}
+		if (customBackgroundColor && !disabled) {
+			style += `background: ${customBackgroundColor};`;
+		}
+		if (customOutlineColor && !disabled) {
+			style += `outline-color: ${customOutlineColor};`;
+		}
+		return style;
+	})();
 </script>
 
 {#if href}
@@ -45,33 +77,56 @@ Status: Okay
 		{...$$restProps}
 		class={`button-${buttonType}`}
 		class:disabled
-		class:placeholder={icon === 'placeholder'}
+		style={buttonStyle}
 	>
-		{#if icon && icon !== 'placeholder'}
-			<div class="icon-container">
+		{#if icon && icon !== 'placeholder' && iconLocation === 'left'}
+			<div class="icon-container" in:fly={{ x: 25, easing: quintOut, duration: 500 }}>
 				<Icon {fill} path={iconLibrary[`${icon}`].path} viewBox={iconLibrary[`${icon}`].viewBox} />
 			</div>
+		{:else if icon === 'placeholder'}
+			<div class="icon-container">
+				<div class="placeholderIcon" />
+			</div>
 		{/if}
-		{name}
+		<span>
+			{name}
+		</span>
+		{#if icon && icon !== 'placeholder' && iconLocation === 'right'}
+			<div class="icon-container" in:fly={{ x: -25, easing: quintOut, udration: 500 }}>
+				<Icon {fill} path={iconLibrary[`${icon}`].path} viewBox={iconLibrary[`${icon}`].viewBox} />
+			</div>
+		{:else if icon === 'placeholder'}
+			<div class="placeholderIcon" />
+		{/if}
 	</a>
 {:else}
 	<button on:click={onClickFunc} title={name} {disabled} {type}>
-		<div
-			{...$$restProps}
-			class={`button-${buttonType}`}
-			class:disabled
-			class:placeholder={icon === 'placeholder'}
-		>
-			{#if icon && icon !== 'placeholder'}
-				<div class="icon-container">
+		<div {...$$restProps} class={`button-${buttonType}`} class:disabled style={buttonStyle}>
+			{#if icon && icon !== 'placeholder' && iconLocation === 'left'}
+				<div class="icon-container" in:fly={{ x: 25, easing: quintOut, duration: 500 }}>
 					<Icon
 						{fill}
 						path={iconLibrary[`${icon}`].path}
 						viewBox={iconLibrary[`${icon}`].viewBox}
 					/>
 				</div>
+			{:else if icon === 'placeholder'}
+				<div class="placeholderIcon" />
 			{/if}
-			{name}
+			<span>
+				{name}
+			</span>
+			{#if icon && icon !== 'placeholder' && iconLocation === 'right'}
+				<div class="icon-container" in:fly={{ x: -25, easing: quintOut, duration: 500 }}>
+					<Icon
+						{fill}
+						path={iconLibrary[`${icon}`].path}
+						viewBox={iconLibrary[`${icon}`].viewBox}
+					/>
+				</div>
+			{:else if icon === 'placeholder'}
+				<div class="placeholderIcon" />
+			{/if}
 		</div>
 	</button>
 {/if}
@@ -152,11 +207,11 @@ Status: Okay
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		gap: 1rem;
+		gap: 0.5rem;
 		border: none;
 		color: var(--c-text-main);
 		text-decoration: none;
-		font-size: var(--fs-normal);
+		font-size: var(--fs-extra-small);
 		font-weight: var(--fw-semi-bold);
 		user-select: none;
 		cursor: pointer;
@@ -188,16 +243,25 @@ Status: Okay
 		width: 1rem;
 	}
 
-	.button-filled.placeholder,
-	.button-filled.placeholder.disabled,
-	.button-text.placeholder,
-	.button-text.placeholder.disabled,
-	.button-tonal.placeholder,
-	.button-tonal.placeholder.disabled,
-	.button-outlined.placeholder,
-	.button-outlined.placeholder.disabled {
-		padding-left: calc(24px + 0.5rem + 12px);
-		padding-right: calc(24px + 0.5rem + 12px);
-		height: 56px;
+	.placeholderIcon {
+		width: calc(12px - 0.25rem);
+		height: 24px;
+	}
+
+	a:hover:not(.disabled),
+	div:hover:not(.disabled) {
+		filter: brightness(85%);
+	}
+
+	@media (min-width: 767px) {
+		a,
+		div {
+			font-size: var(--fs-normal);
+			gap: 1rem;
+		}
+
+		.placeholderIcon {
+			width: calc(12px - 0.5rem);
+		}
 	}
 </style>
