@@ -18,6 +18,13 @@
 	let events = [];
 	let currentEvent = 0;
 	let changes = {};
+	const eventDates = {
+		'Ceremony': 'Sunday, August 17th, 2025',
+		'Sangeet / Reception': 'TBD, August TBD, 2025',
+		'Mehendi': 'TBD, TBD TBD, 2025',
+		'Bachelor Party': 'TBD, TBD TBD, 2025',
+		'Bachelorette Party': 'TBD, TBD TBD, 2025'
+	}
 
 	$: currentGuests = guestsInfo.filter(guest => guest[events[currentEvent]] != 'Not Invited');
 	$: updateChanges(guestsInfo);
@@ -151,7 +158,7 @@
 <form>
 	<div class="info-text">
 		<h1>Mason and Neil's Wedding {events[currentEvent]}</h1>
-		<p class="subtitle">Sunday, August 17th, 2025</p>
+		<p class="subtitle">{eventDates[`${events[currentEvent]}`]}</p>
 		<p>Who all will be attending the {events[currentEvent]}?</p>
 	</div>
 
