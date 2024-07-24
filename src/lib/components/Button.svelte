@@ -157,6 +157,9 @@ Status: Okay
 
 	.button-filled.disabled {
 		background: var(--c-background-disabled);
+	}
+
+	.button-filled.disabled span {
 		color: var(--c-text-disabled);
 	}
 
@@ -174,7 +177,7 @@ Status: Okay
 		background: var(--c-background-hover);
 	}
 
-	.button-text.disabled {
+	.button-text.disabled span {
 		color: var(--c-background-disabled);
 	}
 
@@ -193,6 +196,9 @@ Status: Okay
 
 	.button-tonal.disabled {
 		background: var(--c-background-disabled);
+	}
+
+	.button-tonal.disabled span {
 		color: var(--c-text-disabled);
 	}
 
@@ -211,6 +217,9 @@ Status: Okay
 
 	.button-outlined.disabled {
 		outline: 1px solid var(--c-background-disabled);
+	}
+	
+	.button-outlined.disabled span {
 		color: var(--c-background-disabled);
 	}
 

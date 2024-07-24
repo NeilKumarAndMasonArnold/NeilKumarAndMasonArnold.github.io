@@ -107,10 +107,16 @@
 		gap: 2rem;
 	}
 
+	.wrapper h1,
+	.wrapper p {
+		color: var(--c-text-main);
+	}
+
 	h2 {
 		text-align: left;
 		margin-bottom: 1rem;
 		margin-left: 1rem;
+		color: var(--c-text-main);
 	}
 
 	.container {
