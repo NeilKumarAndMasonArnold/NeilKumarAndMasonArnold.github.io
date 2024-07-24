@@ -81,6 +81,7 @@ Status: Ongoing
 		padding-left: 4px;
 		text-align: left;
 		max-width: calc(100% - 28px); /* subtract radio-button width/margin */
+		color: var(--c-text-main);
 	}
 
 	input:disabled ~ .radio-label {

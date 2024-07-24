@@ -22,7 +22,7 @@
 </script>
 
 <form on:submit|preventDefault={handleSubmit}>
-	<div class="infotext">
+	<div class="info-text">
 		<h1>Mason and Neil's Wedding</h1>
 		{#if parties.length == 0}
 			<p>
@@ -69,8 +69,12 @@
 		gap: 1rem;
 	}
 
-	.infotext {
+	.info-text {
 		margin-bottom: 1rem;
+	}
+
+	.info-text h1, .info-text p {
+		color: var(--c-text-main);
 	}
 
 	div {

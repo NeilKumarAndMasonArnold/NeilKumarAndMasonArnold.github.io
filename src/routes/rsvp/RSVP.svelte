@@ -225,6 +225,10 @@
 		margin-bottom: 0.5rem;
 	}
 
+	.info-text h1, .info-text p {
+		color: var(--c-text-main);
+	}
+
 	h1,
 	.subtitle {
 		margin-bottom: 0.5rem;
@@ -243,6 +247,7 @@
 		font-weight: bold;
 		justify-self: start;
 		margin-top: 0.5rem;
+		color: var(--c-text-main);
 	}
 
 	.guest-buttons {
