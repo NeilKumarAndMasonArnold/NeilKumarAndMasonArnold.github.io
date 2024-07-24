@@ -57,14 +57,19 @@ Status: Okay
 
 	$: buttonStyle = (() => {
 		let style = '';
-		if (customTextColor && !disabled) {
-			style += `color: ${customTextColor};`;
-		}
 		if (customBackgroundColor && !disabled) {
 			style += `background: ${customBackgroundColor};`;
 		}
 		if (customOutlineColor && !disabled) {
 			style += `outline-color: ${customOutlineColor};`;
+		}
+		return style;
+	})();
+
+	$: buttonTextStyle = (() => {
+		let style = '';
+		if (customTextColor && !disabled) {
+			style+= `color: ${customTextColor};`;
 		}
 		return style;
 	})();
@@ -88,11 +93,11 @@ Status: Okay
 				<div class="placeholderIcon" />
 			</div>
 		{/if}
-		<span>
+		<span style={buttonTextStyle}>
 			{name}
 		</span>
 		{#if icon && icon !== 'placeholder' && iconLocation === 'right'}
-			<div class="icon-container" in:fly={{ x: -25, easing: quintOut, udration: 500 }}>
+			<div class="icon-container" in:fly={{ x: -25, easing: quintOut, duration: 500 }}>
 				<Icon {fill} path={iconLibrary[`${icon}`].path} viewBox={iconLibrary[`${icon}`].viewBox} />
 			</div>
 		{:else if icon === 'placeholder'}
@@ -113,7 +118,7 @@ Status: Okay
 			{:else if icon === 'placeholder'}
 				<div class="placeholderIcon" />
 			{/if}
-			<span>
+			<span style={buttonTextStyle}>
 				{name}
 			</span>
 			{#if icon && icon !== 'placeholder' && iconLocation === 'right'}
@@ -146,6 +151,10 @@ Status: Okay
 		color: var(--c-text-active);
 	}
 
+	.button-filled span {
+		color: var(--c-text-active);
+	}
+
 	.button-filled.disabled {
 		background: var(--c-background-disabled);
 		color: var(--c-text-disabled);
@@ -153,9 +162,12 @@ Status: Okay
 
 	.button-text {
 		padding: 16px 24px;
-		color: var(--c-accent-modes);
 		font-weight: var(--fw-medium);
 		letter-spacing: var(--ls-normal);
+	}
+
+	.button-text span {
+		color: var(--c-accent-modes);
 	}
 
 	.button-text:hover {
@@ -173,6 +185,9 @@ Status: Okay
 	.button-tonal {
 		padding: 16px 24px;
 		background: var(--c-background-nav);
+	}
+
+	.button-tonal span {
 		color: var(--c-text-tonal);
 	}
 
@@ -184,6 +199,9 @@ Status: Okay
 	.button-outlined {
 		padding: 16px 24px;
 		outline: 1px solid var(--c-background-active);
+	}
+
+	.button-outlined span {
 		color: var(--c-background-active);
 	}
 

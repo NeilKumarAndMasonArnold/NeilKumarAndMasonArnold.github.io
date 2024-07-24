@@ -22,6 +22,7 @@ LOERuthaseonuthasotuneha.suhadbesknthqeus;thkda.spunhtosenuthaoenu
 
 	.loader::before {
 		content: attr(data-content);
+		color: var(--c-text-main);
 	}
 
 	@keyframes spiderverse {
