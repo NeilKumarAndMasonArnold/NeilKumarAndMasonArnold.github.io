@@ -58,10 +58,12 @@ Status: Ongoing
 		height: 10px;
 		border-radius: 50%;
 		background: var(--c-background-active);
+		transition: all var(--td-medium-4) var(--te-emphasized);
 	}
 
 	input:checked + .radio-button::after {
 		display: block;
+		transition: all var(--td-medium-4) var(--te-emphasized);
 	}
 
 	input:focus + .radio-button {
@@ -69,12 +71,13 @@ Status: Ongoing
 	}
 
 	input:disabled + .radio-button {
-		border-color: var(--c-text-disabled);
+		border-color: var(--c-background-disabled);
 		cursor: not-allowed;
 	}
 
 	input:disabled:checked + .radio-button::after {
-		background: var(--c-text-disabled);
+		background: var(--c-background-disabled);
+		transition: all var(--td-medium-4) var(--te-emphasized);
 	}
 
 	.radio-label {
@@ -85,7 +88,7 @@ Status: Ongoing
 	}
 
 	input:disabled ~ .radio-label {
-		color: var(--c-text-disabled);
+		color: var(--c-background-disabled);
 		cursor: not-allowed;
 	}
 </style>

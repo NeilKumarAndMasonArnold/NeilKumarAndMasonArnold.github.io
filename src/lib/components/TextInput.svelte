@@ -78,12 +78,12 @@ Status: Okay
 
 	.textfield-outlined {
 		position: relative;
-		background: inherit;
+		background: var(--c-background-main);
 	}
 
 	.textfield-outlined input {
 		border-radius: 4px;
-		background: inherit;
+		background: var(--c-background-main);
 	}
 
 	.textfield-outlined.focused input,
@@ -99,7 +99,7 @@ Status: Okay
 		line-height: 16px;
 		transform: translateY(-24px);
 		color: var(--c-background-active);
-		background: inherit;
+		background: var(--c-background-main);
 		padding: 0 4px;
 	}
 
@@ -107,7 +107,7 @@ Status: Okay
 
 	.textfield-filled {
 		position: relative;
-		background: inherit;
+		background: var(--c-background-main);
 	}
 
 	.textfield-filled input {
