@@ -50,6 +50,7 @@
 	.wrapper {
 		height: max-content;
 		width: 100%;
+		max-width: 1000px;
 		display: flex;
 		flex-direction: column;
 		gap: 2rem;
