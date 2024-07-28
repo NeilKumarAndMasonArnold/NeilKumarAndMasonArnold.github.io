@@ -22,7 +22,6 @@ Status: Ongoing
 
 	<div class="call-to-action">
 		<Button
-			fill="var(--c-text-hover)"
 			href="/rsvp"
 			icon="open-envelope-with-document"
 			buttonType="filled"
@@ -31,7 +30,6 @@ Status: Ongoing
 
 		<div class="secondary-button">
 			<Button
-				fill="var(--c-text-tonal)"
 				href="/about/schedule"
 				icon="checked-calendar"
 				buttonType="tonal"
@@ -79,9 +77,9 @@ Status: Ongoing
 		user-select: none;
 	}
 
-	.secondary-button {
+	/* .secondary-button {
 		display: none;
-	}
+	} */
 
 	@media (min-width: 550px) {
 		div.call-to-action {
