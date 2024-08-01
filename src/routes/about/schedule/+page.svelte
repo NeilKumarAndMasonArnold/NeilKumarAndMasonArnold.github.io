@@ -6,19 +6,19 @@
 	let events = [
 		// {
 		// 	title: 'Bachelor Party',
-		// 	date: 'TBD, 2025',
+		// 	date: 'TBD, 2025 at TBD',
 		// 	description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 		// },
 		// {
 		// 	title: 'Bachelorette Party',
-		// 	date: 'TBD, 2025',
+		// 	date: 'TBD, 2025 at TBD',
 		// 	description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit.'
 		// },
 		{
 			// title: 'Haldi Ceremony / Mikveh',
 			title: 'Haldi Ceremony',
 			date: 'TBD, 2025',
-			description: 'lorem ipsum dolor sit amet, consecteture adipiscing elit.'
+			description: 'The Haldi ceremony is a pre-wedding ritual in Indian culture where a हल्दी (or "haldi"), a paste made from turmeric, is applied to the bride and groom.  This ceremony is believed to bless the couple and bring good fortune.  It also helps in beautifying the skin before the wedding day.'
 		},
 		{
 			title: 'Mehendi Ceremony',
@@ -28,13 +28,13 @@
 		},
 		{
 			title: 'Wedding Ceremony',
-			date: 'August 17th, 2025',
-			description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+			date: 'TBD on Sunday, August 17th, 2025',
+			description: 'The main event where the bride and groom will exchange vows / rings / necklaces and are united in marriage.  This ceremony will blend traditional Indian, Jewish, and Western (christian syncretist) elements, creating a unique and meaningful celebration of love and commitment.'
 		},
 		{
 			title: 'Sangeet / Reception',
-			date: 'TBD, 2025',
-			description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit.'
+			date: 'TBD on Sunday, August 17th, 2025 (date/time is subject to change)',
+			description: 'The Sangeet is a joyful pre-wedding celebration involving music, dance, and festivities.  It will be combined with the reception, which is a post-wedding party to celebrate the newlyweds. Guests can expect a night filled with delicious food, energetic performances, and lots of dancing.'
 		}
 	];
 </script>

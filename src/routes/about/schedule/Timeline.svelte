@@ -57,11 +57,14 @@ Status: ongoing
 		left: var(--line-offset);
 		margin-left: calc(-1 * var(--line-width) / 2);
 		background: var(--c-background-nav);
+		transition: all var(--td-medium-4) var(--te-emphasized) 0s;
 	}
-	
+
 	.timeline.visible::after {
 		height: 100%;
-		transition: height var(--animation-time);
+		transition:
+			all var(--td-medium-4) var(--te-emphasized) 0s,
+			height var(--animation-time);
 	}
 
 	.container {
@@ -90,7 +93,11 @@ Status: ongoing
 		z-index: 1;
 		border: var(--event-marker-border) solid var(--c-background-active);
 		background: var(--c-background-nav);
-		transition: all var(--td-medium-4) var(--te-emphasized) var(--item-delay);
+		transition:
+			all var(--td-medium-4) var(--te-emphasized) 0s,
+			height var(--td-medium-4) var(--te-emphasized) var(--item-delay),
+			width var(--td-medium-4) var(--te-emphasized) var(--item-delay),
+			left var(--td-medium-4) var(--te-emphasized) var(--item-delay);
 	}
 
 	.container::before {
@@ -111,6 +118,7 @@ Status: ongoing
 		border-left-width: 0;
 		border-right-color: var(--c-background-nav);
 		transition:
+			all var(--td-medium-4) var(--te-emphasized) 0s,
 			right var(--td-medium-4) var(--te-emphasized) var(--item-delay),
 			left var(--td-medium-4) var(--te-emphasized) var(--item-delay),
 			border-width var(--td-medium-4) var(--te-emphasized) var(--item-delay);
