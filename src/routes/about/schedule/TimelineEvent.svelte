@@ -38,6 +38,7 @@ Status: ongoing
 
 	.title {
 		margin-bottom: 0.5rem;
+		color: var(--c-text-main);
 	}
 
 	.date {
@@ -45,11 +46,20 @@ Status: ongoing
 		border-bottom: 1px solid var(--c-background-active);
 		font-weight: var(--fw-normal);
 		font-size: var(--fs-semi-large);
+		color: var(--c-text-main);
 	}
 
 	p {
 		padding-top: 0.5rem;
-		text-align: left;
-		text-indent: 2rem;
+		color: var(--c-text-main);
+	}
+
+	@media (min-width: 767px) {
+		p {
+			text-align: justify;
+			text-wrap: pretty;
+			hyphens: auto;
+			text-indent: 2rem;
+		}
 	}
 </style>
