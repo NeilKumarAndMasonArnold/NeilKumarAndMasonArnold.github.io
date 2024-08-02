@@ -1,5 +1,3 @@
-// place files you want to import through the `$lib` alias in this folder.
-
 // ---- Website Page Tree ----
 export interface Page {
 	name: string;
@@ -67,7 +65,7 @@ export const imageLibrary: Image[] = [
 		title: 'Neil and Mason',
 		creator: 'Riley Arnold',
 		type: 'art',
-		description: '{undefined}',
+		description: 'Lovely artwork created by the sister of the bride and maid of honor, Riley Arnold, of the couple in a loving embrace.',
 		pin: true
 	},
 	{

@@ -27,14 +27,16 @@ Status: Complete
 
 <style>
 	a {
+		border-radius: 24px;
 		display: flex;
 		gap: 1rem;
 		align-items: center;
-		padding: 0.5rem;
+		padding: 0.5rem 1rem;
 		text-decoration: none;
 	}
 
-	a:hover, a:focus {
+	a:hover,
+	a:focus {
 		background: var(--c-background-hover);
 	}
 
@@ -55,6 +57,7 @@ Status: Complete
 		a {
 			border-radius: 10px;
 		}
+
 		h1 {
 			display: none;
 		}

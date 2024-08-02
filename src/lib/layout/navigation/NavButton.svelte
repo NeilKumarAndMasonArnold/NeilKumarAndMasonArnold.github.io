@@ -26,6 +26,7 @@ Status: Ongoing
 	let isHovered = false;
 	let subpagesShown = false;
 	let hasSubpages = subpages.length > 0;
+
 	$: isCurrent =
 		$page.url.pathname === href || ($page.url.pathname.startsWith(href) && href !== '/');
 

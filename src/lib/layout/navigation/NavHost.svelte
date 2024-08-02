@@ -8,7 +8,6 @@ Status: Ongoing
 -->
 
 <script>
-	//@ts-nocheck
 	import { onMount } from 'svelte';
 	import { page } from '$app/stores';
 	import { fly } from 'svelte/transition';
