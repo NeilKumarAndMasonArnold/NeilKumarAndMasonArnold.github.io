@@ -4,7 +4,7 @@ This component renders an accessible toggle switch for users to manually
 override the application's default theming.
 
 Author: Neil A. Kumar (2024)
-Status: Okay
+Status: Complete
 -->
 
 <script>
@@ -29,7 +29,6 @@ Status: Okay
 		}
 	});
 
-	// Why am I getting an typescript-like type casting error here???
 	function toggleTheming(event) {
 		if (event.target.checked) {
 			document.body.classList.add('dark-theme');
@@ -170,7 +169,7 @@ Status: Okay
 		order: 2;
 		overflow: hidden;
 		background: var(--c-toggle-sky-day);
-		border: 1px solid rgba(255, 255, 255, 0.4); /* css custom property? */
+		border: 1px solid var(--c-toggle-border);
 	}
 
 	#sun {

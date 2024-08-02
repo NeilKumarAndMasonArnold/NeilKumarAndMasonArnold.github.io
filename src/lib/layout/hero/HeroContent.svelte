@@ -21,20 +21,12 @@ Status: Ongoing
 	<p>All you need to know about our big day:</p>
 
 	<div class="call-to-action">
-		<Button
-			href="/rsvp"
-			icon="open-envelope-with-document"
-			buttonType="filled"
-			name="RSVP"
-		/>
+		<div class="primary-button">
+			<Button href="/rsvp" icon="open-envelope-with-document" buttonType="filled" name="RSVP" />
+		</div>
 
 		<div class="secondary-button">
-			<Button
-				href="/about/schedule"
-				icon="checked-calendar"
-				buttonType="tonal"
-				name="Schedule"
-			/>
+			<Button href="/about/schedule" icon="checked-calendar" buttonType="tonal" name="Schedule" />
 		</div>
 	</div>
 </div>
@@ -72,14 +64,15 @@ Status: Ongoing
 
 	div.call-to-action {
 		display: flex;
-		flex-direction: column;
+		flex-direction: row;
 		gap: 1rem;
 		user-select: none;
 	}
 
-	/* .secondary-button {
-		display: none;
-	} */
+	.primary-button,
+	.secondary-button {
+		flex-grow: 4;
+	}
 
 	@media (min-width: 550px) {
 		div.call-to-action {

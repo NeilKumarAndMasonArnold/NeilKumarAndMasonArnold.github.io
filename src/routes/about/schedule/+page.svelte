@@ -24,7 +24,7 @@
 			title: 'Mehendi Ceremony',
 			date: 'TBD, 2025',
 			description:
-				"A mehendi ceremony is a pre-wedding ritual in many South Asian cultures, particularly in India.  Traditionally, it involves appying intricate henna designs to the bride's hands and feet.  Often held a day or two before the wedding, the ceremony is attended by a smaller cohort of close family and friends.  The mehendi is believed to bring good luck and acts as a symbol of joy and beauty."
+				'A मेंहदी ( "mehendi" ) ceremony is a pre-wedding ritual in many South Asian cultures, particularly in India.  Traditionally, it involves appying intricate henna designs to the bride\'s hands and feet.  Often held a day or two before the wedding, the ceremony is attended by a smaller cohort of close family and friends.  The mehendi is believed to bring good luck and acts as a symbol of joy and beauty.'
 		},
 		{
 			title: 'Wedding Ceremony',

@@ -24,6 +24,7 @@ Status: Complete
 	}
 
 	button {
+		border-radius: 24px;
 		height: 48px;
 		width: 48px;
 		display: flex;
@@ -35,6 +36,11 @@ Status: Complete
 		border: none;
 		cursor: pointer;
 		user-select: none;
+	}
+
+	button:hover,
+	button:focus {
+		background: var(--c-background-hover);
 	}
 
 	span {
@@ -70,11 +76,11 @@ Status: Complete
 	}
 
 	.open span::before {
-		transform: rotate(45deg) translate(10px, -10px);
+		transform: rotate(45deg) translate(7px, -7px);
 	}
 
 	.open span::after {
-		transform: rotate(-45deg) translate(10px, 10px);
+		transform: rotate(-45deg) translate(7px, 7px);
 	}
 
 	@media (min-width: 768px) {

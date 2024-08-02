@@ -112,6 +112,7 @@ body {
 	--c-toggle-moon: rgb(246, 236, 155);
 	--c-toggle-sun: rgb(255, 236, 66);
 	--c-toggle-star: rgb(255, 255, 255);
+	--c-toggle-border: rgba(255, 255, 255, 0.4);
 
 	/* ---- SHADOWS and GLOWS ---- */
 	--c-shadow-drop: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.08);
