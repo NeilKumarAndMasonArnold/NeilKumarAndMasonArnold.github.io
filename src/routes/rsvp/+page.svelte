@@ -28,7 +28,7 @@
 	let guestsInfo;
 
 	const SCRIPT_URL =
-		'https://script.google.com/macros/s/AKfycbwkK1UzG7dTk9YLCJJLqpwK7p_qK41rdn40GMk0ag4/dev';
+		'https://script.google.com/macros/s/AKfycbzQu_rg6YTg8xZysfS6DsKeyZgzIZ_cp_rm_UpRhsvKMMIhcfNcCnEKOolg1c1mqPEZ/exec';
 
 	$: currentStage = stages[stage];
 </script>
